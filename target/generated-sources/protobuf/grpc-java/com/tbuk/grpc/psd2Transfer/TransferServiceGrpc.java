@@ -60,21 +60,21 @@ public final class TransferServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest,
-      com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse> getTransferStatusMethod;
+      com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse> getTransferStatusMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "transferStatus",
       requestType = com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest.class,
-      responseType = com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse.class,
+      responseType = com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest,
-      com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse> getTransferStatusMethod() {
-    io.grpc.MethodDescriptor<com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest, com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse> getTransferStatusMethod;
+      com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse> getTransferStatusMethod() {
+    io.grpc.MethodDescriptor<com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest, com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse> getTransferStatusMethod;
     if ((getTransferStatusMethod = TransferServiceGrpc.getTransferStatusMethod) == null) {
       synchronized (TransferServiceGrpc.class) {
         if ((getTransferStatusMethod = TransferServiceGrpc.getTransferStatusMethod) == null) {
           TransferServiceGrpc.getTransferStatusMethod = getTransferStatusMethod = 
-              io.grpc.MethodDescriptor.<com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest, com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest, com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.tbuk.grpc.psd2Transfer.TransferService", "transferStatus"))
@@ -82,7 +82,7 @@ public final class TransferServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse.getDefaultInstance()))
+                  com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new TransferServiceMethodDescriptorSupplier("transferStatus"))
                   .build();
           }
@@ -128,7 +128,7 @@ public final class TransferServiceGrpc {
     /**
      */
     public void transferStatus(com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest request,
-        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getTransferStatusMethod(), responseObserver);
     }
 
@@ -146,7 +146,7 @@ public final class TransferServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest,
-                com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse>(
+                com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse>(
                   this, METHODID_TRANSFER_STATUS)))
           .build();
     }
@@ -181,7 +181,7 @@ public final class TransferServiceGrpc {
     /**
      */
     public void transferStatus(com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest request,
-        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getTransferStatusMethod(), getCallOptions()), request, responseObserver);
     }
@@ -214,7 +214,7 @@ public final class TransferServiceGrpc {
 
     /**
      */
-    public com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse transferStatus(com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest request) {
+    public com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse transferStatus(com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest request) {
       return blockingUnaryCall(
           getChannel(), getTransferStatusMethod(), getCallOptions(), request);
     }
@@ -248,7 +248,7 @@ public final class TransferServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse> transferStatus(
+    public com.google.common.util.concurrent.ListenableFuture<com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse> transferStatus(
         com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getTransferStatusMethod(), getCallOptions()), request);
@@ -281,7 +281,7 @@ public final class TransferServiceGrpc {
           break;
         case METHODID_TRANSFER_STATUS:
           serviceImpl.transferStatus((com.tbuk.grpc.psd2Transfer.Transfer.PaymentStatusRequest) request,
-              (io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2Transfer.Transfer.TransferResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();

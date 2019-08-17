@@ -3297,6 +3297,531 @@ public final class Transfer {
 
   }
 
+  public interface TransferStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2Transfer.TransferStatusResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string TransactionStatus = 1;</code>
+     */
+    java.lang.String getTransactionStatus();
+    /**
+     * <code>string TransactionStatus = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTransactionStatusBytes();
+  }
+  /**
+   * Protobuf type {@code com.tbuk.grpc.psd2Transfer.TransferStatusResponse}
+   */
+  public  static final class TransferStatusResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2Transfer.TransferStatusResponse)
+      TransferStatusResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TransferStatusResponse.newBuilder() to construct.
+    private TransferStatusResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TransferStatusResponse() {
+      transactionStatus_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TransferStatusResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              transactionStatus_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tbuk.grpc.psd2Transfer.Transfer.internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tbuk.grpc.psd2Transfer.Transfer.internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.class, com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.Builder.class);
+    }
+
+    public static final int TRANSACTIONSTATUS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object transactionStatus_;
+    /**
+     * <code>string TransactionStatus = 1;</code>
+     */
+    public java.lang.String getTransactionStatus() {
+      java.lang.Object ref = transactionStatus_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transactionStatus_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string TransactionStatus = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTransactionStatusBytes() {
+      java.lang.Object ref = transactionStatus_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transactionStatus_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTransactionStatusBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transactionStatus_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTransactionStatusBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transactionStatus_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse)) {
+        return super.equals(obj);
+      }
+      com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse other = (com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse) obj;
+
+      boolean result = true;
+      result = result && getTransactionStatus()
+          .equals(other.getTransactionStatus());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRANSACTIONSTATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionStatus().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.tbuk.grpc.psd2Transfer.TransferStatusResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2Transfer.TransferStatusResponse)
+        com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tbuk.grpc.psd2Transfer.Transfer.internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tbuk.grpc.psd2Transfer.Transfer.internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.class, com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.Builder.class);
+      }
+
+      // Construct using com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        transactionStatus_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tbuk.grpc.psd2Transfer.Transfer.internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_descriptor;
+      }
+
+      public com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse getDefaultInstanceForType() {
+        return com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.getDefaultInstance();
+      }
+
+      public com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse build() {
+        com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse buildPartial() {
+        com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse result = new com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse(this);
+        result.transactionStatus_ = transactionStatus_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse) {
+          return mergeFrom((com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse other) {
+        if (other == com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse.getDefaultInstance()) return this;
+        if (!other.getTransactionStatus().isEmpty()) {
+          transactionStatus_ = other.transactionStatus_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object transactionStatus_ = "";
+      /**
+       * <code>string TransactionStatus = 1;</code>
+       */
+      public java.lang.String getTransactionStatus() {
+        java.lang.Object ref = transactionStatus_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transactionStatus_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string TransactionStatus = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTransactionStatusBytes() {
+        java.lang.Object ref = transactionStatus_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transactionStatus_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string TransactionStatus = 1;</code>
+       */
+      public Builder setTransactionStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        transactionStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string TransactionStatus = 1;</code>
+       */
+      public Builder clearTransactionStatus() {
+        
+        transactionStatus_ = getDefaultInstance().getTransactionStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string TransactionStatus = 1;</code>
+       */
+      public Builder setTransactionStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        transactionStatus_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2Transfer.TransferStatusResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2Transfer.TransferStatusResponse)
+    private static final com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse();
+    }
+
+    public static com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TransferStatusResponse>
+        PARSER = new com.google.protobuf.AbstractParser<TransferStatusResponse>() {
+      public TransferStatusResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TransferStatusResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TransferStatusResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TransferStatusResponse> getParserForType() {
+      return PARSER;
+    }
+
+    public com.tbuk.grpc.psd2Transfer.Transfer.TransferStatusResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BankAccountOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2Transfer.BankAccount)
       com.google.protobuf.MessageOrBuilder {
@@ -13958,6 +14483,11 @@ public final class Transfer {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tbuk_grpc_psd2Transfer_PaymentStatusRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tbuk_grpc_psd2Transfer_BankAccount_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14039,56 +14569,58 @@ public final class Transfer {
       "\016transaction_id\030\001 \001(\t\0226\n\006status\030\002 \001(\0162&." +
       "com.tbuk.grpc.psd2Transfer.StatusCode\022\032\n" +
       "\022status_description\030\003 \001(\t\"*\n\024PaymentStat" +
-      "usRequest\022\022\n\ntransferId\030\001 \001(\t\"\212\006\n\013BankAc" +
-      "count\022>\n\005token\030\001 \001(\0132-.com.tbuk.grpc.psd" +
-      "2Transfer.BankAccount.TokenH\000\022>\n\005swift\030\002" +
-      " \001(\0132-.com.tbuk.grpc.psd2Transfer.BankAc" +
-      "count.SwiftH\000\022<\n\004sepa\030\003 \001(\0132,.com.tbuk.g" +
-      "rpc.psd2Transfer.BankAccount.SepaH\000\022:\n\003a" +
-      "ch\030\004 \001(\0132+.com.tbuk.grpc.psd2Transfer.Ba" +
-      "nkAccount.AchH\000\022<\n\004bank\030\005 \001(\0132,.com.tbuk" +
-      ".grpc.psd2Transfer.BankAccount.BankH\000\022Q\n" +
-      "\017faster_payments\030\006 \001(\01326.com.tbuk.grpc.p" +
-      "sd2Transfer.BankAccount.FasterPaymentsH\000" +
-      "\022@\n\006custom\030\007 \001(\0132..com.tbuk.grpc.psd2Tra" +
-      "nsfer.BankAccount.CustomH\000\032.\n\005Token\022\021\n\tm" +
-      "ember_id\030\001 \001(\t\022\022\n\naccount_id\030\002 \001(\t\032\027\n\004Ba" +
-      "nk\022\017\n\007bank_id\030\001 \001(\t\032%\n\005Swift\022\013\n\003bic\030\001 \001(" +
-      "\t\022\017\n\007account\030\002 \001(\t\032!\n\004Sepa\022\014\n\004iban\030\001 \001(\t" +
-      "\022\013\n\003bic\030\002 \001(\t\032\'\n\003Ach\022\017\n\007routing\030\001 \001(\t\022\017\n" +
-      "\007account\030\002 \001(\t\032;\n\016FasterPayments\022\021\n\tsort" +
-      "_code\030\001 \001(\t\022\026\n\016account_number\030\002 \001(\t\032*\n\006C" +
-      "ustom\022\017\n\007bank_id\030\001 \001(\t\022\017\n\007payload\030\002 \001(\tB" +
-      "\t\n\007account\"\210\001\n\013Destination\0228\n\007account\030\001 " +
-      "\001(\0132\'.com.tbuk.grpc.psd2Transfer.BankAcc" +
-      "ount\022?\n\rcustomer_data\030\002 \001(\0132(.com.tbuk.g" +
-      "rpc.psd2Transfer.CustomerData\"Y\n\014Custome" +
-      "rData\022\023\n\013legal_names\030\001 \003(\t\0224\n\007address\030\002 " +
-      "\001(\0132#.com.tbuk.grpc.psd2Transfer.Address" +
-      "\"\241\001\n\007Address\022\024\n\014house_number\030\001 \001(\t\022\022\n\nho" +
-      "use_name\030\002 \001(\t\022\r\n\005flats\030\003 \001(\t\022\016\n\006street\030" +
-      "\004 \001(\t\022\r\n\005place\030\005 \001(\t\022\021\n\tpost_code\030\006 \001(\t\022" +
-      "\014\n\004city\030\007 \001(\t\022\017\n\007country\030\010 \001(\t\022\014\n\004full\030\t" +
-      " \001(\t\"(\n\005Money\022\020\n\010currency\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t*\235\003\n\nStatusCode\022\022\n\016INVALID_STATUS\020" +
-      "\000\022\016\n\nPROCESSING\020\001\022\013\n\007SUCCESS\020\002\022\024\n\020FAILUR" +
-      "E_CANCELED\020\003\022\036\n\032FAILURE_INSUFFICIENT_FUN" +
-      "DS\020\004\022\034\n\030FAILURE_INVALID_CURRENCY\020\005\022\035\n\031FA" +
-      "ILURE_PERMISSION_DENIED\020\006\022\031\n\025FAILURE_QUO" +
-      "TE_EXPIRED\020\007\022\032\n\026FAILURE_INVALID_AMOUNT\020\010" +
-      "\022\031\n\025FAILURE_INVALID_QUOTE\020\t\022\023\n\017FAILURE_E" +
-      "XPIRED\020\n\022\023\n\017FAILURE_GENERIC\020\013\022\035\n\031FAILURE" +
-      "_ACCOUNT_NOT_FOUND\020\014\022!\n\035FAILURE_TRANSACT" +
-      "ION_NOT_FOUND\020\r\022#\n\037FAILURE_UNSUPPORTED_D" +
-      "ESTINATION\020\016\022\010\n\004SENT\020\0172\270\002\n\017TransferServi" +
-      "ce\022\211\001\n\010transfer\022+.com.tbuk.grpc.psd2Tran" +
-      "sfer.TransferRequest\032,.com.tbuk.grpc.psd" +
-      "2Transfer.TransferResponse\"\"\202\323\344\223\002\034\"\n/tra" +
-      "nsfers:\016PaymentRequest\022\230\001\n\016transferStatu" +
-      "s\0220.com.tbuk.grpc.psd2Transfer.PaymentSt" +
-      "atusRequest\032,.com.tbuk.grpc.psd2Transfer" +
-      ".TransferResponse\"&\202\323\344\223\002 \022\036/transfers/{t" +
-      "ransferId}/statusb\006proto3"
+      "usRequest\022\022\n\ntransferId\030\001 \001(\t\"3\n\026Transfe" +
+      "rStatusResponse\022\031\n\021TransactionStatus\030\001 \001" +
+      "(\t\"\212\006\n\013BankAccount\022>\n\005token\030\001 \001(\0132-.com." +
+      "tbuk.grpc.psd2Transfer.BankAccount.Token" +
+      "H\000\022>\n\005swift\030\002 \001(\0132-.com.tbuk.grpc.psd2Tr" +
+      "ansfer.BankAccount.SwiftH\000\022<\n\004sepa\030\003 \001(\013" +
+      "2,.com.tbuk.grpc.psd2Transfer.BankAccoun" +
+      "t.SepaH\000\022:\n\003ach\030\004 \001(\0132+.com.tbuk.grpc.ps" +
+      "d2Transfer.BankAccount.AchH\000\022<\n\004bank\030\005 \001" +
+      "(\0132,.com.tbuk.grpc.psd2Transfer.BankAcco" +
+      "unt.BankH\000\022Q\n\017faster_payments\030\006 \001(\01326.co" +
+      "m.tbuk.grpc.psd2Transfer.BankAccount.Fas" +
+      "terPaymentsH\000\022@\n\006custom\030\007 \001(\0132..com.tbuk" +
+      ".grpc.psd2Transfer.BankAccount.CustomH\000\032" +
+      ".\n\005Token\022\021\n\tmember_id\030\001 \001(\t\022\022\n\naccount_i" +
+      "d\030\002 \001(\t\032\027\n\004Bank\022\017\n\007bank_id\030\001 \001(\t\032%\n\005Swif" +
+      "t\022\013\n\003bic\030\001 \001(\t\022\017\n\007account\030\002 \001(\t\032!\n\004Sepa\022" +
+      "\014\n\004iban\030\001 \001(\t\022\013\n\003bic\030\002 \001(\t\032\'\n\003Ach\022\017\n\007rou" +
+      "ting\030\001 \001(\t\022\017\n\007account\030\002 \001(\t\032;\n\016FasterPay" +
+      "ments\022\021\n\tsort_code\030\001 \001(\t\022\026\n\016account_numb" +
+      "er\030\002 \001(\t\032*\n\006Custom\022\017\n\007bank_id\030\001 \001(\t\022\017\n\007p" +
+      "ayload\030\002 \001(\tB\t\n\007account\"\210\001\n\013Destination\022" +
+      "8\n\007account\030\001 \001(\0132\'.com.tbuk.grpc.psd2Tra" +
+      "nsfer.BankAccount\022?\n\rcustomer_data\030\002 \001(\013" +
+      "2(.com.tbuk.grpc.psd2Transfer.CustomerDa" +
+      "ta\"Y\n\014CustomerData\022\023\n\013legal_names\030\001 \003(\t\022" +
+      "4\n\007address\030\002 \001(\0132#.com.tbuk.grpc.psd2Tra" +
+      "nsfer.Address\"\241\001\n\007Address\022\024\n\014house_numbe" +
+      "r\030\001 \001(\t\022\022\n\nhouse_name\030\002 \001(\t\022\r\n\005flats\030\003 \001" +
+      "(\t\022\016\n\006street\030\004 \001(\t\022\r\n\005place\030\005 \001(\t\022\021\n\tpos" +
+      "t_code\030\006 \001(\t\022\014\n\004city\030\007 \001(\t\022\017\n\007country\030\010 " +
+      "\001(\t\022\014\n\004full\030\t \001(\t\"(\n\005Money\022\020\n\010currency\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t*\235\003\n\nStatusCode\022\022\n\016IN" +
+      "VALID_STATUS\020\000\022\016\n\nPROCESSING\020\001\022\013\n\007SUCCES" +
+      "S\020\002\022\024\n\020FAILURE_CANCELED\020\003\022\036\n\032FAILURE_INS" +
+      "UFFICIENT_FUNDS\020\004\022\034\n\030FAILURE_INVALID_CUR" +
+      "RENCY\020\005\022\035\n\031FAILURE_PERMISSION_DENIED\020\006\022\031" +
+      "\n\025FAILURE_QUOTE_EXPIRED\020\007\022\032\n\026FAILURE_INV" +
+      "ALID_AMOUNT\020\010\022\031\n\025FAILURE_INVALID_QUOTE\020\t" +
+      "\022\023\n\017FAILURE_EXPIRED\020\n\022\023\n\017FAILURE_GENERIC" +
+      "\020\013\022\035\n\031FAILURE_ACCOUNT_NOT_FOUND\020\014\022!\n\035FAI" +
+      "LURE_TRANSACTION_NOT_FOUND\020\r\022#\n\037FAILURE_" +
+      "UNSUPPORTED_DESTINATION\020\016\022\010\n\004SENT\020\0172\276\002\n\017" +
+      "TransferService\022\211\001\n\010transfer\022+.com.tbuk." +
+      "grpc.psd2Transfer.TransferRequest\032,.com." +
+      "tbuk.grpc.psd2Transfer.TransferResponse\"" +
+      "\"\202\323\344\223\002\034\"\n/transfers:\016PaymentRequest\022\236\001\n\016" +
+      "transferStatus\0220.com.tbuk.grpc.psd2Trans" +
+      "fer.PaymentStatusRequest\0322.com.tbuk.grpc" +
+      ".psd2Transfer.TransferStatusResponse\"&\202\323" +
+      "\344\223\002 \022\036/transfers/{transferId}/statusb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14121,8 +14653,14 @@ public final class Transfer {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2Transfer_PaymentStatusRequest_descriptor,
         new java.lang.String[] { "TransferId", });
-    internal_static_com_tbuk_grpc_psd2Transfer_BankAccount_descriptor =
+    internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_tbuk_grpc_psd2Transfer_TransferStatusResponse_descriptor,
+        new java.lang.String[] { "TransactionStatus", });
+    internal_static_com_tbuk_grpc_psd2Transfer_BankAccount_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_com_tbuk_grpc_psd2Transfer_BankAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2Transfer_BankAccount_descriptor,
@@ -14170,25 +14708,25 @@ public final class Transfer {
         internal_static_com_tbuk_grpc_psd2Transfer_BankAccount_Custom_descriptor,
         new java.lang.String[] { "BankId", "Payload", });
     internal_static_com_tbuk_grpc_psd2Transfer_Destination_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_tbuk_grpc_psd2Transfer_Destination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2Transfer_Destination_descriptor,
         new java.lang.String[] { "Account", "CustomerData", });
     internal_static_com_tbuk_grpc_psd2Transfer_CustomerData_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_com_tbuk_grpc_psd2Transfer_CustomerData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2Transfer_CustomerData_descriptor,
         new java.lang.String[] { "LegalNames", "Address", });
     internal_static_com_tbuk_grpc_psd2Transfer_Address_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_com_tbuk_grpc_psd2Transfer_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2Transfer_Address_descriptor,
         new java.lang.String[] { "HouseNumber", "HouseName", "Flats", "Street", "Place", "PostCode", "City", "Country", "Full", });
     internal_static_com_tbuk_grpc_psd2Transfer_Money_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_com_tbuk_grpc_psd2Transfer_Money_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2Transfer_Money_descriptor,

@@ -1,12 +1,16 @@
 package tbuk.psd2.grpc.rest;
 
 import org.lognet.springboot.grpc.GRpcService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tbuk.psd2.grpc.bl.StorageServ;
 
 @GRpcService
 public class StorageService extends com.tbuk.grpc.psd2.StorageServiceGrpc.StorageServiceImplBase {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(StorageService.class);
 
     @Autowired
     StorageServ service;

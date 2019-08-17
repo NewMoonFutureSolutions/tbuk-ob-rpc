@@ -27,7 +27,9 @@ message TransferResponse {
 message PaymentStatusRequest{
     string transferId=1;
 }
-
+message TransferStatusResponse {
+    string TransactionStatus=1;
+}
 //*****
 
 message BankAccount {
@@ -137,7 +139,7 @@ service TransferService {
       body: "PaymentRequest"
     };
     }
-    rpc transferStatus (PaymentStatusRequest) returns (TransferResponse){
+    rpc transferStatus (PaymentStatusRequest) returns (TransferStatusResponse){
         option (google.api.http) = {
       get: "/transfers/{transferId}/status"
 

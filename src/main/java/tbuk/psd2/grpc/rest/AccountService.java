@@ -2,6 +2,8 @@ package tbuk.psd2.grpc.rest;
 
 import com.tbuk.grpc.psd2Account.AccountServiceGrpc;
 import org.lognet.springboot.grpc.GRpcService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import tbuk.psd2.grpc.bl.AisService;
 
@@ -9,6 +11,7 @@ import tbuk.psd2.grpc.bl.AisService;
 @GRpcService
 public class AccountService extends AccountServiceGrpc.AccountServiceImplBase {
 
+    private static final Logger LOGGER =LoggerFactory.getLogger(AccountService.class);
     @Autowired
     AisService service;
 

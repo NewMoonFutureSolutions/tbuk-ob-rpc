@@ -1,8 +1,10 @@
 package tbuk.psd2.grpc.app;
 
+import com.tbuk.grpc.psd2Account.Account;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tbuk.psd2.grpc.util.CONSTANTS;
+import tbuk.psd2.grpc.util.Utils;
 
 @SpringBootApplication
 public class SpringGrpcApplication {
@@ -30,17 +32,17 @@ public class SpringGrpcApplication {
 
 //  private static void LoadTransactions(){
 //    CONSTANTS.transactionId++;
-//    TransactionResponse.builder().id(String.valueOf(CONSTANTS.transactionId))
-//            .amount(Amount.builder().currency("GBP").value("800").build())
-//            .createdAt(Utils.getDateNowInFormat1())
-//            .description("Room rent")
-//            .status("PROCESSING")
-//            .type("DEBIT")
-//            .tokenId("1")
-//            .tokenTransferId("1").build();
+//    Account.Transaction.newBuilder().setId(String.valueOf(CONSTANTS.transactionId))
+//            .setAmount(Account.Money.newBuilder().setCurrency("GBP").setValue("800").build())
+//            .setCreatedAt(Utils.getDateNowInFormat1())
+//            .setDescription("Room rent")
+//            .setStatus(Account.TransactionStatus.PROCESSING)
+//            .setType(Account.TransactionType.DEBIT)
+//            .setTokenId("1")
+//            .setTokenTransferId("100").build();
 //
 //
-//    // CONSTANTS.COSTUMER1TRANSACTIONS.put()
+//     CONSTANTS.COSTUMER1TRANSACTIONS.put();
 //  }
 
 }

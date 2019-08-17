@@ -11,6 +11,7 @@ com/tbuk/grpc/psd2/Storage$DeleteEntryRequest.class
 com/tbuk/grpc/psd2Account/Account$BankAccount$SepaOrBuilder.class
 com/tbuk/grpc/psd2Transfer/Transfer$BankAccount$TokenOrBuilder.class
 com/tbuk/grpc/psd2Account/Account$TransactionsPage.class
+com/tbuk/grpc/psd2Transfer/Transfer$TransferStatusResponse$1.class
 com/tbuk/grpc/psd2Account/Account$BankAccount$Swift.class
 com/tbuk/grpc/psd2/NotificationOuterClass$DeleteNotificationRequest.class
 com/tbuk/grpc/psd2Account/Account$1.class
@@ -36,7 +37,10 @@ com/tbuk/grpc/psd2/NotificationOuterClass$DeleteNotificationRequestOrBuilder.cla
 com/tbuk/grpc/psd2Transfer/Transfer$StatusCode.class
 com/tbuk/grpc/psd2/Storage$EntryOrBuilder.class
 com/tbuk/grpc/psd2Account/Account$CreateAccountResponse$1.class
+com/tbuk/grpc/psd2Transfer/Transfer$TransferStatusResponse.class
+com/tbuk/grpc/psd2Transfer/Transfer$TransferStatusResponse$Builder.class
 com/tbuk/grpc/psd2/Linking$Custom$1.class
+tbuk/psd2/grpc/bl/TransferServ.class
 com/tbuk/grpc/psd2/AccountLinkingServiceGrpc$AccountLinkingServiceImplBase.class
 com/tbuk/grpc/psd2Account/Account$BankAccount$AchOrBuilder.class
 com/tbuk/grpc/psd2/HealthServiceGrpc$HealthServiceImplBase.class
@@ -44,6 +48,7 @@ com/tbuk/grpc/psd2Account/Account$AccountDetailsOrBuilder.class
 com/tbuk/grpc/psd2Transfer/TransferServiceGrpc$TransferServiceStub.class
 com/tbuk/grpc/psd2Account/Account$CreateAccountResponse.class
 com/tbuk/grpc/psd2Account/Account$BankAccount.class
+com/tbuk/grpc/psd2Transfer/Transfer$TransferStatusResponseOrBuilder.class
 com/tbuk/grpc/psd2Account/Account$TransactionsPage$Builder.class
 com/tbuk/grpc/psd2Account/Account$UnlinkResponseOrBuilder.class
 com/tbuk/grpc/psd2Transfer/Transfer$BankAccount$Swift$Builder.class
