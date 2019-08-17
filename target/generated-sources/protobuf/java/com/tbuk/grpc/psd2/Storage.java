@@ -544,14 +544,34 @@ public final class Storage {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string message = 1;</code>
+     * <code>string key = 1;</code>
      */
-    java.lang.String getMessage();
+    java.lang.String getKey();
     /**
-     * <code>string message = 1;</code>
+     * <code>string key = 1;</code>
      */
     com.google.protobuf.ByteString
-        getMessageBytes();
+        getKeyBytes();
+
+    /**
+     * <code>string value = 2;</code>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>string value = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+
+    /**
+     * <code>string category = 3;</code>
+     */
+    java.lang.String getCategory();
+    /**
+     * <code>string category = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getCategoryBytes();
   }
   /**
    * Protobuf type {@code com.tbuk.grpc.psd2.Entry}
@@ -566,7 +586,9 @@ public final class Storage {
       super(builder);
     }
     private Entry() {
-      message_ = "";
+      key_ = "";
+      value_ = "";
+      category_ = "";
     }
 
     @java.lang.Override
@@ -603,7 +625,19 @@ public final class Storage {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              message_ = s;
+              key_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              value_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              category_ = s;
               break;
             }
           }
@@ -630,34 +664,102 @@ public final class Storage {
               com.tbuk.grpc.psd2.Storage.Entry.class, com.tbuk.grpc.psd2.Storage.Entry.Builder.class);
     }
 
-    public static final int MESSAGE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object message_;
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
     /**
-     * <code>string message = 1;</code>
+     * <code>string key = 1;</code>
      */
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        message_ = s;
+        key_ = s;
         return s;
       }
     }
     /**
-     * <code>string message = 1;</code>
+     * <code>string key = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
+        getKeyBytes() {
+      java.lang.Object ref = key_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        message_ = b;
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object value_;
+    /**
+     * <code>string value = 2;</code>
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CATEGORY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object category_;
+    /**
+     * <code>string category = 3;</code>
+     */
+    public java.lang.String getCategory() {
+      java.lang.Object ref = category_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        category_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string category = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCategoryBytes() {
+      java.lang.Object ref = category_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        category_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -676,8 +778,14 @@ public final class Storage {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getMessageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
+      if (!getKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (!getValueBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+      }
+      if (!getCategoryBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, category_);
       }
       unknownFields.writeTo(output);
     }
@@ -687,8 +795,14 @@ public final class Storage {
       if (size != -1) return size;
 
       size = 0;
-      if (!getMessageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
+      if (!getKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (!getValueBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+      }
+      if (!getCategoryBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, category_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -706,8 +820,12 @@ public final class Storage {
       com.tbuk.grpc.psd2.Storage.Entry other = (com.tbuk.grpc.psd2.Storage.Entry) obj;
 
       boolean result = true;
-      result = result && getMessage()
-          .equals(other.getMessage());
+      result = result && getKey()
+          .equals(other.getKey());
+      result = result && getValue()
+          .equals(other.getValue());
+      result = result && getCategory()
+          .equals(other.getCategory());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -719,8 +837,12 @@ public final class Storage {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getMessage().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getValue().hashCode();
+      hash = (37 * hash) + CATEGORY_FIELD_NUMBER;
+      hash = (53 * hash) + getCategory().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -850,7 +972,11 @@ public final class Storage {
       }
       public Builder clear() {
         super.clear();
-        message_ = "";
+        key_ = "";
+
+        value_ = "";
+
+        category_ = "";
 
         return this;
       }
@@ -874,7 +1000,9 @@ public final class Storage {
 
       public com.tbuk.grpc.psd2.Storage.Entry buildPartial() {
         com.tbuk.grpc.psd2.Storage.Entry result = new com.tbuk.grpc.psd2.Storage.Entry(this);
-        result.message_ = message_;
+        result.key_ = key_;
+        result.value_ = value_;
+        result.category_ = category_;
         onBuilt();
         return result;
       }
@@ -916,8 +1044,16 @@ public final class Storage {
 
       public Builder mergeFrom(com.tbuk.grpc.psd2.Storage.Entry other) {
         if (other == com.tbuk.grpc.psd2.Storage.Entry.getDefaultInstance()) return this;
-        if (!other.getMessage().isEmpty()) {
-          message_ = other.message_;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (!other.getValue().isEmpty()) {
+          value_ = other.value_;
+          onChanged();
+        }
+        if (!other.getCategory().isEmpty()) {
+          category_ = other.category_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -947,71 +1083,209 @@ public final class Storage {
         return this;
       }
 
-      private java.lang.Object message_ = "";
+      private java.lang.Object key_ = "";
       /**
-       * <code>string message = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public java.lang.String getMessage() {
-        java.lang.Object ref = message_;
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          message_ = s;
+          key_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>string key = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getMessageBytes() {
-        java.lang.Object ref = message_;
+          getKeyBytes() {
+        java.lang.Object ref = key_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          message_ = b;
+          key_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public Builder setMessage(
+      public Builder setKey(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        message_ = value;
+        key_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public Builder clearMessage() {
+      public Builder clearKey() {
         
-        message_ = getDefaultInstance().getMessage();
+        key_ = getDefaultInstance().getKey();
         onChanged();
         return this;
       }
       /**
-       * <code>string message = 1;</code>
+       * <code>string key = 1;</code>
        */
-      public Builder setMessageBytes(
+      public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        message_ = value;
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 2;</code>
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public Builder clearValue() {
+        
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value = 2;</code>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        value_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object category_ = "";
+      /**
+       * <code>string category = 3;</code>
+       */
+      public java.lang.String getCategory() {
+        java.lang.Object ref = category_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          category_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string category = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCategoryBytes() {
+        java.lang.Object ref = category_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          category_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string category = 3;</code>
+       */
+      public Builder setCategory(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        category_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string category = 3;</code>
+       */
+      public Builder clearCategory() {
+        
+        category_ = getDefaultInstance().getCategory();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string category = 3;</code>
+       */
+      public Builder setCategoryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        category_ = value;
         onChanged();
         return this;
       }
@@ -2813,20 +3087,20 @@ public final class Storage {
       "\n\rstorage.proto\022\022com.tbuk.grpc.psd2\032\034goo" +
       "gle/api/annotations.proto\032\033google/protob" +
       "uf/empty.proto\" \n\014EntryUpdated\022\020\n\010previo" +
-      "us\030\001 \001(\t\"\030\n\005Entry\022\017\n\007message\030\001 \001(\t\"\036\n\017Ge" +
-      "tEntryRequest\022\013\n\003key\030\001 \001(\t\")\n\022DeleteEntr" +
-      "yRequest\022\023\n\013keyToDelete\030\001 \001(\t\"+\n\rEntryRe" +
-      "sponse\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t2\345\002\n\016S" +
-      "torageService\022h\n\010putEntry\022\031.com.tbuk.grp" +
-      "c.psd2.Entry\032 .com.tbuk.grpc.psd2.EntryU" +
-      "pdated\"\037\202\323\344\223\002\031\032\020/storage/entries:\005Entry\022" +
-      "r\n\010getEntry\022#.com.tbuk.grpc.psd2.GetEntr" +
-      "yRequest\032!.com.tbuk.grpc.psd2.EntryRespo" +
-      "nse\"\036\202\323\344\223\002\030\032\026/storage/entries/{key}\022u\n\013d" +
-      "eleteEntry\022&.com.tbuk.grpc.psd2.DeleteEn" +
-      "tryRequest\032\026.google.protobuf.Empty\"&\202\323\344\223" +
-      "\002 *\036/storage/entries/{keyToDelete}b\006prot" +
-      "o3"
+      "us\030\001 \001(\t\"5\n\005Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t\022\020\n\010category\030\003 \001(\t\"\036\n\017GetEntryReque" +
+      "st\022\013\n\003key\030\001 \001(\t\")\n\022DeleteEntryRequest\022\023\n" +
+      "\013keyToDelete\030\001 \001(\t\"+\n\rEntryResponse\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t2\345\002\n\016StorageServi" +
+      "ce\022h\n\010putEntry\022\031.com.tbuk.grpc.psd2.Entr" +
+      "y\032 .com.tbuk.grpc.psd2.EntryUpdated\"\037\202\323\344" +
+      "\223\002\031\032\020/storage/entries:\005Entry\022r\n\010getEntry" +
+      "\022#.com.tbuk.grpc.psd2.GetEntryRequest\032!." +
+      "com.tbuk.grpc.psd2.EntryResponse\"\036\202\323\344\223\002\030" +
+      "\032\026/storage/entries/{key}\022u\n\013deleteEntry\022" +
+      "&.com.tbuk.grpc.psd2.DeleteEntryRequest\032" +
+      "\026.google.protobuf.Empty\"&\202\323\344\223\002 *\036/storag" +
+      "e/entries/{keyToDelete}b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2853,7 +3127,7 @@ public final class Storage {
     internal_static_com_tbuk_grpc_psd2_Entry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2_Entry_descriptor,
-        new java.lang.String[] { "Message", });
+        new java.lang.String[] { "Key", "Value", "Category", });
     internal_static_com_tbuk_grpc_psd2_GetEntryRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_tbuk_grpc_psd2_GetEntryRequest_fieldAccessorTable = new

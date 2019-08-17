@@ -36,13 +36,45 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- file to base64 -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.api.grpc/proto-google-common-protos -->
 <dependency>
     <groupId>com.google.api.grpc</groupId>
     <artifactId>proto-google-common-protos</artifactId>
     <version>1.16.0</version>
 </dependency>
-        
+
+        <!-- https://mvnrepository.com/artifact/com.yy/android-util -->
+        <dependency>
+            <groupId>com.yy</groupId>
+            <artifactId>android-util</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.crypto.tink</groupId>
+            <artifactId>tink</artifactId>
+            <version>1.2.0-rc2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt -->
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+            <version>6.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/net.i2p.crypto/eddsa eddsa2-->
+        <dependency>
+            <groupId>net.i2p.crypto</groupId>
+            <artifactId>eddsa</artifactId>
+            <version>0.3.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -96,5 +128,14 @@
     </executions>
  </plugin>
         </plugins>
+
+
     </build>
+
+    <repositories>
+        <repository>
+            <id>tokenrepo</id>
+            <url>https://token.jfrog.io/token/public-libs-release-local/</url>
+        </repository>
+    </repositories>
 </project>

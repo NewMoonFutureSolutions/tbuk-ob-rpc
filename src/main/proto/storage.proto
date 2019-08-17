@@ -11,7 +11,9 @@ message EntryUpdated {
 }
 
 message Entry {
-    string message = 1;
+    string key=1;
+    string value=2;
+    string category=3;
 }
 
 message GetEntryRequest{

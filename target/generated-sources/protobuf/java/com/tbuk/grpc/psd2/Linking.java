@@ -539,903 +539,6 @@ public final class Linking {
 
   }
 
-  public interface GetBankAuthorizationResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.GetBankAuthorizationResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string bankId = 1;</code>
-     */
-    java.lang.String getBankId();
-    /**
-     * <code>string bankId = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getBankIdBytes();
-
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    java.util.List<com.tbuk.grpc.psd2.Linking.SealedMessage> 
-        getSealedMessageList();
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.SealedMessage getSealedMessage(int index);
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    int getSealedMessageCount();
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    java.util.List<? extends com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder> 
-        getSealedMessageOrBuilderList();
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder getSealedMessageOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code com.tbuk.grpc.psd2.GetBankAuthorizationResponse}
-   */
-  public  static final class GetBankAuthorizationResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.GetBankAuthorizationResponse)
-      GetBankAuthorizationResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetBankAuthorizationResponse.newBuilder() to construct.
-    private GetBankAuthorizationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GetBankAuthorizationResponse() {
-      bankId_ = "";
-      sealedMessage_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GetBankAuthorizationResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              bankId_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                sealedMessage_ = new java.util.ArrayList<com.tbuk.grpc.psd2.Linking.SealedMessage>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              sealedMessage_.add(
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.SealedMessage.parser(), extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          sealedMessage_ = java.util.Collections.unmodifiableList(sealedMessage_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.class, com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int BANKID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object bankId_;
-    /**
-     * <code>string bankId = 1;</code>
-     */
-    public java.lang.String getBankId() {
-      java.lang.Object ref = bankId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bankId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string bankId = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getBankIdBytes() {
-      java.lang.Object ref = bankId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        bankId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SEALEDMESSAGE_FIELD_NUMBER = 2;
-    private java.util.List<com.tbuk.grpc.psd2.Linking.SealedMessage> sealedMessage_;
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    public java.util.List<com.tbuk.grpc.psd2.Linking.SealedMessage> getSealedMessageList() {
-      return sealedMessage_;
-    }
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    public java.util.List<? extends com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder> 
-        getSealedMessageOrBuilderList() {
-      return sealedMessage_;
-    }
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    public int getSealedMessageCount() {
-      return sealedMessage_.size();
-    }
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.SealedMessage getSealedMessage(int index) {
-      return sealedMessage_.get(index);
-    }
-    /**
-     * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder getSealedMessageOrBuilder(
-        int index) {
-      return sealedMessage_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getBankIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bankId_);
-      }
-      for (int i = 0; i < sealedMessage_.size(); i++) {
-        output.writeMessage(2, sealedMessage_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getBankIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bankId_);
-      }
-      for (int i = 0; i < sealedMessage_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, sealedMessage_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse)) {
-        return super.equals(obj);
-      }
-      com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse other = (com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse) obj;
-
-      boolean result = true;
-      result = result && getBankId()
-          .equals(other.getBankId());
-      result = result && getSealedMessageList()
-          .equals(other.getSealedMessageList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + BANKID_FIELD_NUMBER;
-      hash = (53 * hash) + getBankId().hashCode();
-      if (getSealedMessageCount() > 0) {
-        hash = (37 * hash) + SEALEDMESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getSealedMessageList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.tbuk.grpc.psd2.GetBankAuthorizationResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.GetBankAuthorizationResponse)
-        com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.class, com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.Builder.class);
-      }
-
-      // Construct using com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSealedMessageFieldBuilder();
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        bankId_ = "";
-
-        if (sealedMessageBuilder_ == null) {
-          sealedMessage_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          sealedMessageBuilder_.clear();
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_descriptor;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse getDefaultInstanceForType() {
-        return com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.getDefaultInstance();
-      }
-
-      public com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse build() {
-        com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse buildPartial() {
-        com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse result = new com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.bankId_ = bankId_;
-        if (sealedMessageBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            sealedMessage_ = java.util.Collections.unmodifiableList(sealedMessage_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.sealedMessage_ = sealedMessage_;
-        } else {
-          result.sealedMessage_ = sealedMessageBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse) {
-          return mergeFrom((com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse other) {
-        if (other == com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.getDefaultInstance()) return this;
-        if (!other.getBankId().isEmpty()) {
-          bankId_ = other.bankId_;
-          onChanged();
-        }
-        if (sealedMessageBuilder_ == null) {
-          if (!other.sealedMessage_.isEmpty()) {
-            if (sealedMessage_.isEmpty()) {
-              sealedMessage_ = other.sealedMessage_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureSealedMessageIsMutable();
-              sealedMessage_.addAll(other.sealedMessage_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sealedMessage_.isEmpty()) {
-            if (sealedMessageBuilder_.isEmpty()) {
-              sealedMessageBuilder_.dispose();
-              sealedMessageBuilder_ = null;
-              sealedMessage_ = other.sealedMessage_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              sealedMessageBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSealedMessageFieldBuilder() : null;
-            } else {
-              sealedMessageBuilder_.addAllMessages(other.sealedMessage_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object bankId_ = "";
-      /**
-       * <code>string bankId = 1;</code>
-       */
-      public java.lang.String getBankId() {
-        java.lang.Object ref = bankId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bankId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string bankId = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBankIdBytes() {
-        java.lang.Object ref = bankId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bankId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string bankId = 1;</code>
-       */
-      public Builder setBankId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        bankId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bankId = 1;</code>
-       */
-      public Builder clearBankId() {
-        
-        bankId_ = getDefaultInstance().getBankId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string bankId = 1;</code>
-       */
-      public Builder setBankIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        bankId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<com.tbuk.grpc.psd2.Linking.SealedMessage> sealedMessage_ =
-        java.util.Collections.emptyList();
-      private void ensureSealedMessageIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          sealedMessage_ = new java.util.ArrayList<com.tbuk.grpc.psd2.Linking.SealedMessage>(sealedMessage_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.SealedMessage, com.tbuk.grpc.psd2.Linking.SealedMessage.Builder, com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder> sealedMessageBuilder_;
-
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public java.util.List<com.tbuk.grpc.psd2.Linking.SealedMessage> getSealedMessageList() {
-        if (sealedMessageBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sealedMessage_);
-        } else {
-          return sealedMessageBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public int getSealedMessageCount() {
-        if (sealedMessageBuilder_ == null) {
-          return sealedMessage_.size();
-        } else {
-          return sealedMessageBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.SealedMessage getSealedMessage(int index) {
-        if (sealedMessageBuilder_ == null) {
-          return sealedMessage_.get(index);
-        } else {
-          return sealedMessageBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder setSealedMessage(
-          int index, com.tbuk.grpc.psd2.Linking.SealedMessage value) {
-        if (sealedMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSealedMessageIsMutable();
-          sealedMessage_.set(index, value);
-          onChanged();
-        } else {
-          sealedMessageBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder setSealedMessage(
-          int index, com.tbuk.grpc.psd2.Linking.SealedMessage.Builder builderForValue) {
-        if (sealedMessageBuilder_ == null) {
-          ensureSealedMessageIsMutable();
-          sealedMessage_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sealedMessageBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder addSealedMessage(com.tbuk.grpc.psd2.Linking.SealedMessage value) {
-        if (sealedMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSealedMessageIsMutable();
-          sealedMessage_.add(value);
-          onChanged();
-        } else {
-          sealedMessageBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder addSealedMessage(
-          int index, com.tbuk.grpc.psd2.Linking.SealedMessage value) {
-        if (sealedMessageBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSealedMessageIsMutable();
-          sealedMessage_.add(index, value);
-          onChanged();
-        } else {
-          sealedMessageBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder addSealedMessage(
-          com.tbuk.grpc.psd2.Linking.SealedMessage.Builder builderForValue) {
-        if (sealedMessageBuilder_ == null) {
-          ensureSealedMessageIsMutable();
-          sealedMessage_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sealedMessageBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder addSealedMessage(
-          int index, com.tbuk.grpc.psd2.Linking.SealedMessage.Builder builderForValue) {
-        if (sealedMessageBuilder_ == null) {
-          ensureSealedMessageIsMutable();
-          sealedMessage_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sealedMessageBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder addAllSealedMessage(
-          java.lang.Iterable<? extends com.tbuk.grpc.psd2.Linking.SealedMessage> values) {
-        if (sealedMessageBuilder_ == null) {
-          ensureSealedMessageIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, sealedMessage_);
-          onChanged();
-        } else {
-          sealedMessageBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder clearSealedMessage() {
-        if (sealedMessageBuilder_ == null) {
-          sealedMessage_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          sealedMessageBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public Builder removeSealedMessage(int index) {
-        if (sealedMessageBuilder_ == null) {
-          ensureSealedMessageIsMutable();
-          sealedMessage_.remove(index);
-          onChanged();
-        } else {
-          sealedMessageBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.SealedMessage.Builder getSealedMessageBuilder(
-          int index) {
-        return getSealedMessageFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder getSealedMessageOrBuilder(
-          int index) {
-        if (sealedMessageBuilder_ == null) {
-          return sealedMessage_.get(index);  } else {
-          return sealedMessageBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public java.util.List<? extends com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder> 
-           getSealedMessageOrBuilderList() {
-        if (sealedMessageBuilder_ != null) {
-          return sealedMessageBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(sealedMessage_);
-        }
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.SealedMessage.Builder addSealedMessageBuilder() {
-        return getSealedMessageFieldBuilder().addBuilder(
-            com.tbuk.grpc.psd2.Linking.SealedMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.SealedMessage.Builder addSealedMessageBuilder(
-          int index) {
-        return getSealedMessageFieldBuilder().addBuilder(
-            index, com.tbuk.grpc.psd2.Linking.SealedMessage.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .com.tbuk.grpc.psd2.SealedMessage sealedMessage = 2;</code>
-       */
-      public java.util.List<com.tbuk.grpc.psd2.Linking.SealedMessage.Builder> 
-           getSealedMessageBuilderList() {
-        return getSealedMessageFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.SealedMessage, com.tbuk.grpc.psd2.Linking.SealedMessage.Builder, com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder> 
-          getSealedMessageFieldBuilder() {
-        if (sealedMessageBuilder_ == null) {
-          sealedMessageBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.SealedMessage, com.tbuk.grpc.psd2.Linking.SealedMessage.Builder, com.tbuk.grpc.psd2.Linking.SealedMessageOrBuilder>(
-                  sealedMessage_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          sealedMessage_ = null;
-        }
-        return sealedMessageBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.GetBankAuthorizationResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.GetBankAuthorizationResponse)
-    private static final com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse();
-    }
-
-    public static com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GetBankAuthorizationResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetBankAuthorizationResponse>() {
-      public GetBankAuthorizationResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetBankAuthorizationResponse(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<GetBankAuthorizationResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetBankAuthorizationResponse> getParserForType() {
-      return PARSER;
-    }
-
-    public com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface PlaintextBankAuthorizationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.PlaintextBankAuthorization)
       com.google.protobuf.MessageOrBuilder {
@@ -2461,157 +1564,17 @@ public final class Linking {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-     */
-    boolean hasToken();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.Token getToken();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.TokenOrBuilder getTokenOrBuilder();
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-     */
-    boolean hasTokenAuthorization();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization getTokenAuthorization();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorizationOrBuilder getTokenAuthorizationOrBuilder();
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-     */
-    boolean hasSwift();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.Swift getSwift();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.SwiftOrBuilder getSwiftOrBuilder();
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-     */
-    boolean hasSepa();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.Sepa getSepa();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.SepaOrBuilder getSepaOrBuilder();
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-     */
-    boolean hasAch();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.Ach getAch();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.AchOrBuilder getAchOrBuilder();
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-     */
-    boolean hasBank();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.Bank getBank();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.BankOrBuilder getBankOrBuilder();
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-     */
-    boolean hasFasterPayments();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments getFasterPayments();
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.BankAccount.FasterPaymentsOrBuilder getFasterPaymentsOrBuilder();
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+     * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
      */
     boolean hasCustom();
     /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+     * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
      */
-    com.tbuk.grpc.psd2.Linking.BankAccount.Custom getCustom();
+    com.tbuk.grpc.psd2.Linking.Custom getCustom();
     /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+     * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
      */
-    com.tbuk.grpc.psd2.Linking.BankAccount.CustomOrBuilder getCustomOrBuilder();
-
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-    int getMetadataCount();
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-    boolean containsMetadata(
-        java.lang.String key);
-    /**
-     * Use {@link #getMetadataMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getMetadata();
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-    java.util.Map<java.lang.String, java.lang.String>
-    getMetadataMap();
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-
-    java.lang.String getMetadataOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-
-    java.lang.String getMetadataOrThrow(
-        java.lang.String key);
-
-    /**
-     * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-     */
-    boolean hasAccountFeatures();
-    /**
-     * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.AccountFeatures getAccountFeatures();
-    /**
-     * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-     */
-    com.tbuk.grpc.psd2.Linking.AccountFeaturesOrBuilder getAccountFeaturesOrBuilder();
-
-    public com.tbuk.grpc.psd2.Linking.BankAccount.AccountCase getAccountCase();
+    com.tbuk.grpc.psd2.Linking.CustomOrBuilder getCustomOrBuilder();
   }
   /**
    * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount}
@@ -2660,139 +1623,14 @@ public final class Linking {
               break;
             }
             case 10: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder subBuilder = null;
-              if (accountCase_ == 1) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_).toBuilder();
+              com.tbuk.grpc.psd2.Linking.Custom.Builder subBuilder = null;
+              if (custom_ != null) {
+                subBuilder = custom_.toBuilder();
               }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.Token.parser(), extensionRegistry);
+              custom_ = input.readMessage(com.tbuk.grpc.psd2.Linking.Custom.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 1;
-              break;
-            }
-            case 18: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder subBuilder = null;
-              if (accountCase_ == 2) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_).toBuilder();
-              }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 2;
-              break;
-            }
-            case 26: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder subBuilder = null;
-              if (accountCase_ == 3) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_).toBuilder();
-              }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.Swift.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 3;
-              break;
-            }
-            case 34: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder subBuilder = null;
-              if (accountCase_ == 4) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_).toBuilder();
-              }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 4;
-              break;
-            }
-            case 42: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder subBuilder = null;
-              if (accountCase_ == 5) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_).toBuilder();
-              }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.Ach.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 5;
-              break;
-            }
-            case 50: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder subBuilder = null;
-              if (accountCase_ == 6) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_).toBuilder();
-              }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.Bank.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 6;
-              break;
-            }
-            case 58: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder subBuilder = null;
-              if (accountCase_ == 7) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_).toBuilder();
-              }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 7;
-              break;
-            }
-            case 66: {
-              com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder subBuilder = null;
-              if (accountCase_ == 8) {
-                subBuilder = ((com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_).toBuilder();
-              }
-              account_ =
-                  input.readMessage(com.tbuk.grpc.psd2.Linking.BankAccount.Custom.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_);
-                account_ = subBuilder.buildPartial();
-              }
-              accountCase_ = 8;
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
-                metadata_ = com.google.protobuf.MapField.newMapField(
-                    MetadataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000100;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              metadata__ = input.readMessage(
-                  MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              metadata_.getMutableMap().put(
-                  metadata__.getKey(), metadata__.getValue());
-              break;
-            }
-            case 82: {
-              com.tbuk.grpc.psd2.Linking.AccountFeatures.Builder subBuilder = null;
-              if (accountFeatures_ != null) {
-                subBuilder = accountFeatures_.toBuilder();
-              }
-              accountFeatures_ = input.readMessage(com.tbuk.grpc.psd2.Linking.AccountFeatures.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(accountFeatures_);
-                accountFeatures_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(custom_);
+                custom_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2814,17 +1652,6 @@ public final class Linking {
       return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 9:
-          return internalGetMetadata();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_fieldAccessorTable
@@ -2832,5639 +1659,25 @@ public final class Linking {
               com.tbuk.grpc.psd2.Linking.BankAccount.class, com.tbuk.grpc.psd2.Linking.BankAccount.Builder.class);
     }
 
-    public interface TokenOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.Token)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string member_id = 1;</code>
-       */
-      java.lang.String getMemberId();
-      /**
-       * <code>string member_id = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getMemberIdBytes();
-
-      /**
-       * <code>string account_id = 2;</code>
-       */
-      java.lang.String getAccountId();
-      /**
-       * <code>string account_id = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getAccountIdBytes();
-    }
+    public static final int CUSTOM_FIELD_NUMBER = 1;
+    private com.tbuk.grpc.psd2.Linking.Custom custom_;
     /**
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Token}
-     */
-    public  static final class Token extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.Token)
-        TokenOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Token.newBuilder() to construct.
-      private Token(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Token() {
-        memberId_ = "";
-        accountId_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Token(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                memberId_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                accountId_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Token_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Token_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.Token.class, com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder.class);
-      }
-
-      public static final int MEMBER_ID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object memberId_;
-      /**
-       * <code>string member_id = 1;</code>
-       */
-      public java.lang.String getMemberId() {
-        java.lang.Object ref = memberId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          memberId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string member_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getMemberIdBytes() {
-        java.lang.Object ref = memberId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          memberId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int ACCOUNT_ID_FIELD_NUMBER = 2;
-      private volatile java.lang.Object accountId_;
-      /**
-       * <code>string account_id = 2;</code>
-       */
-      public java.lang.String getAccountId() {
-        java.lang.Object ref = accountId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          accountId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string account_id = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAccountIdBytes() {
-        java.lang.Object ref = accountId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accountId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getMemberIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, memberId_);
-        }
-        if (!getAccountIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accountId_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getMemberIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, memberId_);
-        }
-        if (!getAccountIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accountId_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Token)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.Token other = (com.tbuk.grpc.psd2.Linking.BankAccount.Token) obj;
-
-        boolean result = true;
-        result = result && getMemberId()
-            .equals(other.getMemberId());
-        result = result && getAccountId()
-            .equals(other.getAccountId());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + MEMBER_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getMemberId().hashCode();
-        hash = (37 * hash) + ACCOUNT_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getAccountId().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.Token prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Token}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.Token)
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Token_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Token_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.Token.class, com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.Token.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          memberId_ = "";
-
-          accountId_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Token_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Token getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Token build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Token result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Token buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Token result = new com.tbuk.grpc.psd2.Linking.BankAccount.Token(this);
-          result.memberId_ = memberId_;
-          result.accountId_ = accountId_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Token) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Token)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.Token other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance()) return this;
-          if (!other.getMemberId().isEmpty()) {
-            memberId_ = other.memberId_;
-            onChanged();
-          }
-          if (!other.getAccountId().isEmpty()) {
-            accountId_ = other.accountId_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Token parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.Token) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object memberId_ = "";
-        /**
-         * <code>string member_id = 1;</code>
-         */
-        public java.lang.String getMemberId() {
-          java.lang.Object ref = memberId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            memberId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string member_id = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getMemberIdBytes() {
-          java.lang.Object ref = memberId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            memberId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string member_id = 1;</code>
-         */
-        public Builder setMemberId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          memberId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string member_id = 1;</code>
-         */
-        public Builder clearMemberId() {
-          
-          memberId_ = getDefaultInstance().getMemberId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string member_id = 1;</code>
-         */
-        public Builder setMemberIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          memberId_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object accountId_ = "";
-        /**
-         * <code>string account_id = 2;</code>
-         */
-        public java.lang.String getAccountId() {
-          java.lang.Object ref = accountId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            accountId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string account_id = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getAccountIdBytes() {
-          java.lang.Object ref = accountId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            accountId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string account_id = 2;</code>
-         */
-        public Builder setAccountId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          accountId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account_id = 2;</code>
-         */
-        public Builder clearAccountId() {
-          
-          accountId_ = getDefaultInstance().getAccountId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account_id = 2;</code>
-         */
-        public Builder setAccountIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          accountId_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.Token)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.Token)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.Token DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.Token();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Token getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Token>
-          PARSER = new com.google.protobuf.AbstractParser<Token>() {
-        public Token parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Token(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Token> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Token> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Token getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface TokenAuthorizationOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.TokenAuthorization)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-       */
-      boolean hasAuthorization();
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-       */
-      com.tbuk.grpc.psd2.Linking.BankAuthorization getAuthorization();
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-       */
-      com.tbuk.grpc.psd2.Linking.BankAuthorizationOrBuilder getAuthorizationOrBuilder();
-    }
-    /**
-     * <pre>
-     * One-time encrypted authorization for an account
-     * </pre>
-     *
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.TokenAuthorization}
-     */
-    public  static final class TokenAuthorization extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.TokenAuthorization)
-        TokenAuthorizationOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use TokenAuthorization.newBuilder() to construct.
-      private TokenAuthorization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private TokenAuthorization() {
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private TokenAuthorization(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.tbuk.grpc.psd2.Linking.BankAuthorization.Builder subBuilder = null;
-                if (authorization_ != null) {
-                  subBuilder = authorization_.toBuilder();
-                }
-                authorization_ = input.readMessage(com.tbuk.grpc.psd2.Linking.BankAuthorization.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(authorization_);
-                  authorization_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.class, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder.class);
-      }
-
-      public static final int AUTHORIZATION_FIELD_NUMBER = 1;
-      private com.tbuk.grpc.psd2.Linking.BankAuthorization authorization_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-       */
-      public boolean hasAuthorization() {
-        return authorization_ != null;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAuthorization getAuthorization() {
-        return authorization_ == null ? com.tbuk.grpc.psd2.Linking.BankAuthorization.getDefaultInstance() : authorization_;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAuthorizationOrBuilder getAuthorizationOrBuilder() {
-        return getAuthorization();
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (authorization_ != null) {
-          output.writeMessage(1, getAuthorization());
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (authorization_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getAuthorization());
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization other = (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) obj;
-
-        boolean result = true;
-        result = result && (hasAuthorization() == other.hasAuthorization());
-        if (hasAuthorization()) {
-          result = result && getAuthorization()
-              .equals(other.getAuthorization());
-        }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasAuthorization()) {
-          hash = (37 * hash) + AUTHORIZATION_FIELD_NUMBER;
-          hash = (53 * hash) + getAuthorization().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * One-time encrypted authorization for an account
-       * </pre>
-       *
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.TokenAuthorization}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.TokenAuthorization)
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorizationOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.class, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          if (authorizationBuilder_ == null) {
-            authorization_ = null;
-          } else {
-            authorization_ = null;
-            authorizationBuilder_ = null;
-          }
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization result = new com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization(this);
-          if (authorizationBuilder_ == null) {
-            result.authorization_ = authorization_;
-          } else {
-            result.authorization_ = authorizationBuilder_.build();
-          }
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance()) return this;
-          if (other.hasAuthorization()) {
-            mergeAuthorization(other.getAuthorization());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private com.tbuk.grpc.psd2.Linking.BankAuthorization authorization_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.tbuk.grpc.psd2.Linking.BankAuthorization, com.tbuk.grpc.psd2.Linking.BankAuthorization.Builder, com.tbuk.grpc.psd2.Linking.BankAuthorizationOrBuilder> authorizationBuilder_;
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public boolean hasAuthorization() {
-          return authorizationBuilder_ != null || authorization_ != null;
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public com.tbuk.grpc.psd2.Linking.BankAuthorization getAuthorization() {
-          if (authorizationBuilder_ == null) {
-            return authorization_ == null ? com.tbuk.grpc.psd2.Linking.BankAuthorization.getDefaultInstance() : authorization_;
-          } else {
-            return authorizationBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public Builder setAuthorization(com.tbuk.grpc.psd2.Linking.BankAuthorization value) {
-          if (authorizationBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            authorization_ = value;
-            onChanged();
-          } else {
-            authorizationBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public Builder setAuthorization(
-            com.tbuk.grpc.psd2.Linking.BankAuthorization.Builder builderForValue) {
-          if (authorizationBuilder_ == null) {
-            authorization_ = builderForValue.build();
-            onChanged();
-          } else {
-            authorizationBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public Builder mergeAuthorization(com.tbuk.grpc.psd2.Linking.BankAuthorization value) {
-          if (authorizationBuilder_ == null) {
-            if (authorization_ != null) {
-              authorization_ =
-                com.tbuk.grpc.psd2.Linking.BankAuthorization.newBuilder(authorization_).mergeFrom(value).buildPartial();
-            } else {
-              authorization_ = value;
-            }
-            onChanged();
-          } else {
-            authorizationBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public Builder clearAuthorization() {
-          if (authorizationBuilder_ == null) {
-            authorization_ = null;
-            onChanged();
-          } else {
-            authorization_ = null;
-            authorizationBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public com.tbuk.grpc.psd2.Linking.BankAuthorization.Builder getAuthorizationBuilder() {
-          
-          onChanged();
-          return getAuthorizationFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        public com.tbuk.grpc.psd2.Linking.BankAuthorizationOrBuilder getAuthorizationOrBuilder() {
-          if (authorizationBuilder_ != null) {
-            return authorizationBuilder_.getMessageOrBuilder();
-          } else {
-            return authorization_ == null ?
-                com.tbuk.grpc.psd2.Linking.BankAuthorization.getDefaultInstance() : authorization_;
-          }
-        }
-        /**
-         * <code>.com.tbuk.grpc.psd2.BankAuthorization authorization = 1;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.tbuk.grpc.psd2.Linking.BankAuthorization, com.tbuk.grpc.psd2.Linking.BankAuthorization.Builder, com.tbuk.grpc.psd2.Linking.BankAuthorizationOrBuilder> 
-            getAuthorizationFieldBuilder() {
-          if (authorizationBuilder_ == null) {
-            authorizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.tbuk.grpc.psd2.Linking.BankAuthorization, com.tbuk.grpc.psd2.Linking.BankAuthorization.Builder, com.tbuk.grpc.psd2.Linking.BankAuthorizationOrBuilder>(
-                    getAuthorization(),
-                    getParentForChildren(),
-                    isClean());
-            authorization_ = null;
-          }
-          return authorizationBuilder_;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.TokenAuthorization)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.TokenAuthorization)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<TokenAuthorization>
-          PARSER = new com.google.protobuf.AbstractParser<TokenAuthorization>() {
-        public TokenAuthorization parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TokenAuthorization(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<TokenAuthorization> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<TokenAuthorization> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface BankOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.Bank)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      java.lang.String getBankId();
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getBankIdBytes();
-    }
-    /**
-     * <pre>
-     * Source account managed by a coop bank
-     * </pre>
-     *
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Bank}
-     */
-    public  static final class Bank extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.Bank)
-        BankOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Bank.newBuilder() to construct.
-      private Bank(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Bank() {
-        bankId_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Bank(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                bankId_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.Bank.class, com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder.class);
-      }
-
-      public static final int BANK_ID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object bankId_;
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      public java.lang.String getBankId() {
-        java.lang.Object ref = bankId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bankId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBankIdBytes() {
-        java.lang.Object ref = bankId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bankId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getBankIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bankId_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getBankIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bankId_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Bank)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.Bank other = (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) obj;
-
-        boolean result = true;
-        result = result && getBankId()
-            .equals(other.getBankId());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + BANK_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getBankId().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.Bank prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * Source account managed by a coop bank
-       * </pre>
-       *
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Bank}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.Bank)
-          com.tbuk.grpc.psd2.Linking.BankAccount.BankOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.Bank.class, com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.Bank.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          bankId_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Bank getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Bank build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Bank result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Bank buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Bank result = new com.tbuk.grpc.psd2.Linking.BankAccount.Bank(this);
-          result.bankId_ = bankId_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Bank) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Bank)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.Bank other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance()) return this;
-          if (!other.getBankId().isEmpty()) {
-            bankId_ = other.bankId_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Bank parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object bankId_ = "";
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public java.lang.String getBankId() {
-          java.lang.Object ref = bankId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            bankId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getBankIdBytes() {
-          java.lang.Object ref = bankId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            bankId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public Builder setBankId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          bankId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public Builder clearBankId() {
-          
-          bankId_ = getDefaultInstance().getBankId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public Builder setBankIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          bankId_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.Bank)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.Bank)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.Bank DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.Bank();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Bank getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Bank>
-          PARSER = new com.google.protobuf.AbstractParser<Bank>() {
-        public Bank parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Bank(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Bank> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Bank> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Bank getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface SwiftOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.Swift)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <pre>
-       * BIC code AAAABBCCDD
-       * </pre>
-       *
-       * <code>string bic = 1;</code>
-       */
-      java.lang.String getBic();
-      /**
-       * <pre>
-       * BIC code AAAABBCCDD
-       * </pre>
-       *
-       * <code>string bic = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getBicBytes();
-
-      /**
-       * <code>string account = 2;</code>
-       */
-      java.lang.String getAccount();
-      /**
-       * <code>string account = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getAccountBytes();
-    }
-    /**
-     * <pre>
-     * SWIFT transfer
-     * </pre>
-     *
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Swift}
-     */
-    public  static final class Swift extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.Swift)
-        SwiftOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Swift.newBuilder() to construct.
-      private Swift(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Swift() {
-        bic_ = "";
-        account_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Swift(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                bic_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                account_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.Swift.class, com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder.class);
-      }
-
-      public static final int BIC_FIELD_NUMBER = 1;
-      private volatile java.lang.Object bic_;
-      /**
-       * <pre>
-       * BIC code AAAABBCCDD
-       * </pre>
-       *
-       * <code>string bic = 1;</code>
-       */
-      public java.lang.String getBic() {
-        java.lang.Object ref = bic_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bic_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * BIC code AAAABBCCDD
-       * </pre>
-       *
-       * <code>string bic = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBicBytes() {
-        java.lang.Object ref = bic_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bic_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int ACCOUNT_FIELD_NUMBER = 2;
-      private volatile java.lang.Object account_;
-      /**
-       * <code>string account = 2;</code>
-       */
-      public java.lang.String getAccount() {
-        java.lang.Object ref = account_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          account_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string account = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAccountBytes() {
-        java.lang.Object ref = account_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          account_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getBicBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bic_);
-        }
-        if (!getAccountBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getBicBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bic_);
-        }
-        if (!getAccountBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Swift)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.Swift other = (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) obj;
-
-        boolean result = true;
-        result = result && getBic()
-            .equals(other.getBic());
-        result = result && getAccount()
-            .equals(other.getAccount());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + BIC_FIELD_NUMBER;
-        hash = (53 * hash) + getBic().hashCode();
-        hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
-        hash = (53 * hash) + getAccount().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.Swift prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * SWIFT transfer
-       * </pre>
-       *
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Swift}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.Swift)
-          com.tbuk.grpc.psd2.Linking.BankAccount.SwiftOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.Swift.class, com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.Swift.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          bic_ = "";
-
-          account_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Swift getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Swift build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Swift result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Swift buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Swift result = new com.tbuk.grpc.psd2.Linking.BankAccount.Swift(this);
-          result.bic_ = bic_;
-          result.account_ = account_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Swift) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Swift)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.Swift other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance()) return this;
-          if (!other.getBic().isEmpty()) {
-            bic_ = other.bic_;
-            onChanged();
-          }
-          if (!other.getAccount().isEmpty()) {
-            account_ = other.account_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Swift parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object bic_ = "";
-        /**
-         * <pre>
-         * BIC code AAAABBCCDD
-         * </pre>
-         *
-         * <code>string bic = 1;</code>
-         */
-        public java.lang.String getBic() {
-          java.lang.Object ref = bic_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            bic_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * BIC code AAAABBCCDD
-         * </pre>
-         *
-         * <code>string bic = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getBicBytes() {
-          java.lang.Object ref = bic_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            bic_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * BIC code AAAABBCCDD
-         * </pre>
-         *
-         * <code>string bic = 1;</code>
-         */
-        public Builder setBic(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          bic_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * BIC code AAAABBCCDD
-         * </pre>
-         *
-         * <code>string bic = 1;</code>
-         */
-        public Builder clearBic() {
-          
-          bic_ = getDefaultInstance().getBic();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * BIC code AAAABBCCDD
-         * </pre>
-         *
-         * <code>string bic = 1;</code>
-         */
-        public Builder setBicBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          bic_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object account_ = "";
-        /**
-         * <code>string account = 2;</code>
-         */
-        public java.lang.String getAccount() {
-          java.lang.Object ref = account_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            account_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getAccountBytes() {
-          java.lang.Object ref = account_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            account_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public Builder setAccount(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          account_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public Builder clearAccount() {
-          
-          account_ = getDefaultInstance().getAccount();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public Builder setAccountBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          account_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.Swift)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.Swift)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.Swift DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.Swift();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Swift getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Swift>
-          PARSER = new com.google.protobuf.AbstractParser<Swift>() {
-        public Swift parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Swift(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Swift> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Swift> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Swift getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface SepaOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.Sepa)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <pre>
-       * International Bank Account Number
-       * </pre>
-       *
-       * <code>string iban = 1;</code>
-       */
-      java.lang.String getIban();
-      /**
-       * <pre>
-       * International Bank Account Number
-       * </pre>
-       *
-       * <code>string iban = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getIbanBytes();
-
-      /**
-       * <pre>
-       * Bic code. Optional, except for non EEA countries
-       * </pre>
-       *
-       * <code>string bic = 2;</code>
-       */
-      java.lang.String getBic();
-      /**
-       * <pre>
-       * Bic code. Optional, except for non EEA countries
-       * </pre>
-       *
-       * <code>string bic = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getBicBytes();
-    }
-    /**
-     * <pre>
-     * SEPA transfer.
-     * </pre>
-     *
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Sepa}
-     */
-    public  static final class Sepa extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.Sepa)
-        SepaOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Sepa.newBuilder() to construct.
-      private Sepa(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Sepa() {
-        iban_ = "";
-        bic_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Sepa(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                iban_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                bic_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.class, com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder.class);
-      }
-
-      public static final int IBAN_FIELD_NUMBER = 1;
-      private volatile java.lang.Object iban_;
-      /**
-       * <pre>
-       * International Bank Account Number
-       * </pre>
-       *
-       * <code>string iban = 1;</code>
-       */
-      public java.lang.String getIban() {
-        java.lang.Object ref = iban_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          iban_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * International Bank Account Number
-       * </pre>
-       *
-       * <code>string iban = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIbanBytes() {
-        java.lang.Object ref = iban_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          iban_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int BIC_FIELD_NUMBER = 2;
-      private volatile java.lang.Object bic_;
-      /**
-       * <pre>
-       * Bic code. Optional, except for non EEA countries
-       * </pre>
-       *
-       * <code>string bic = 2;</code>
-       */
-      public java.lang.String getBic() {
-        java.lang.Object ref = bic_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bic_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * Bic code. Optional, except for non EEA countries
-       * </pre>
-       *
-       * <code>string bic = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBicBytes() {
-        java.lang.Object ref = bic_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bic_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getIbanBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iban_);
-        }
-        if (!getBicBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bic_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getIbanBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iban_);
-        }
-        if (!getBicBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bic_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Sepa)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.Sepa other = (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) obj;
-
-        boolean result = true;
-        result = result && getIban()
-            .equals(other.getIban());
-        result = result && getBic()
-            .equals(other.getBic());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + IBAN_FIELD_NUMBER;
-        hash = (53 * hash) + getIban().hashCode();
-        hash = (37 * hash) + BIC_FIELD_NUMBER;
-        hash = (53 * hash) + getBic().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.Sepa prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * SEPA transfer.
-       * </pre>
-       *
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Sepa}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.Sepa)
-          com.tbuk.grpc.psd2.Linking.BankAccount.SepaOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.class, com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          iban_ = "";
-
-          bic_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Sepa getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Sepa build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Sepa result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Sepa buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Sepa result = new com.tbuk.grpc.psd2.Linking.BankAccount.Sepa(this);
-          result.iban_ = iban_;
-          result.bic_ = bic_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Sepa)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.Sepa other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance()) return this;
-          if (!other.getIban().isEmpty()) {
-            iban_ = other.iban_;
-            onChanged();
-          }
-          if (!other.getBic().isEmpty()) {
-            bic_ = other.bic_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Sepa parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object iban_ = "";
-        /**
-         * <pre>
-         * International Bank Account Number
-         * </pre>
-         *
-         * <code>string iban = 1;</code>
-         */
-        public java.lang.String getIban() {
-          java.lang.Object ref = iban_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            iban_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * International Bank Account Number
-         * </pre>
-         *
-         * <code>string iban = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getIbanBytes() {
-          java.lang.Object ref = iban_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            iban_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * International Bank Account Number
-         * </pre>
-         *
-         * <code>string iban = 1;</code>
-         */
-        public Builder setIban(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          iban_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * International Bank Account Number
-         * </pre>
-         *
-         * <code>string iban = 1;</code>
-         */
-        public Builder clearIban() {
-          
-          iban_ = getDefaultInstance().getIban();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * International Bank Account Number
-         * </pre>
-         *
-         * <code>string iban = 1;</code>
-         */
-        public Builder setIbanBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          iban_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object bic_ = "";
-        /**
-         * <pre>
-         * Bic code. Optional, except for non EEA countries
-         * </pre>
-         *
-         * <code>string bic = 2;</code>
-         */
-        public java.lang.String getBic() {
-          java.lang.Object ref = bic_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            bic_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Bic code. Optional, except for non EEA countries
-         * </pre>
-         *
-         * <code>string bic = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getBicBytes() {
-          java.lang.Object ref = bic_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            bic_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Bic code. Optional, except for non EEA countries
-         * </pre>
-         *
-         * <code>string bic = 2;</code>
-         */
-        public Builder setBic(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          bic_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Bic code. Optional, except for non EEA countries
-         * </pre>
-         *
-         * <code>string bic = 2;</code>
-         */
-        public Builder clearBic() {
-          
-          bic_ = getDefaultInstance().getBic();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Bic code. Optional, except for non EEA countries
-         * </pre>
-         *
-         * <code>string bic = 2;</code>
-         */
-        public Builder setBicBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          bic_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.Sepa)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.Sepa)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.Sepa DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.Sepa();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Sepa getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Sepa>
-          PARSER = new com.google.protobuf.AbstractParser<Sepa>() {
-        public Sepa parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Sepa(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Sepa> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Sepa> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Sepa getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface AchOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.Ach)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <pre>
-       * Routing number
-       * </pre>
-       *
-       * <code>string routing = 1;</code>
-       */
-      java.lang.String getRouting();
-      /**
-       * <pre>
-       * Routing number
-       * </pre>
-       *
-       * <code>string routing = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getRoutingBytes();
-
-      /**
-       * <code>string account = 2;</code>
-       */
-      java.lang.String getAccount();
-      /**
-       * <code>string account = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getAccountBytes();
-    }
-    /**
-     * <pre>
-     * ACH transfer
-     * </pre>
-     *
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Ach}
-     */
-    public  static final class Ach extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.Ach)
-        AchOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Ach.newBuilder() to construct.
-      private Ach(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Ach() {
-        routing_ = "";
-        account_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Ach(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                routing_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                account_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.Ach.class, com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder.class);
-      }
-
-      public static final int ROUTING_FIELD_NUMBER = 1;
-      private volatile java.lang.Object routing_;
-      /**
-       * <pre>
-       * Routing number
-       * </pre>
-       *
-       * <code>string routing = 1;</code>
-       */
-      public java.lang.String getRouting() {
-        java.lang.Object ref = routing_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          routing_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       * Routing number
-       * </pre>
-       *
-       * <code>string routing = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getRoutingBytes() {
-        java.lang.Object ref = routing_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          routing_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int ACCOUNT_FIELD_NUMBER = 2;
-      private volatile java.lang.Object account_;
-      /**
-       * <code>string account = 2;</code>
-       */
-      public java.lang.String getAccount() {
-        java.lang.Object ref = account_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          account_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string account = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAccountBytes() {
-        java.lang.Object ref = account_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          account_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getRoutingBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, routing_);
-        }
-        if (!getAccountBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, account_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getRoutingBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, routing_);
-        }
-        if (!getAccountBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, account_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Ach)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.Ach other = (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) obj;
-
-        boolean result = true;
-        result = result && getRouting()
-            .equals(other.getRouting());
-        result = result && getAccount()
-            .equals(other.getAccount());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + ROUTING_FIELD_NUMBER;
-        hash = (53 * hash) + getRouting().hashCode();
-        hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
-        hash = (53 * hash) + getAccount().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.Ach prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * ACH transfer
-       * </pre>
-       *
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Ach}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.Ach)
-          com.tbuk.grpc.psd2.Linking.BankAccount.AchOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.Ach.class, com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.Ach.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          routing_ = "";
-
-          account_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Ach getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Ach build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Ach result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Ach buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Ach result = new com.tbuk.grpc.psd2.Linking.BankAccount.Ach(this);
-          result.routing_ = routing_;
-          result.account_ = account_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Ach) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Ach)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.Ach other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance()) return this;
-          if (!other.getRouting().isEmpty()) {
-            routing_ = other.routing_;
-            onChanged();
-          }
-          if (!other.getAccount().isEmpty()) {
-            account_ = other.account_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Ach parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object routing_ = "";
-        /**
-         * <pre>
-         * Routing number
-         * </pre>
-         *
-         * <code>string routing = 1;</code>
-         */
-        public java.lang.String getRouting() {
-          java.lang.Object ref = routing_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            routing_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Routing number
-         * </pre>
-         *
-         * <code>string routing = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getRoutingBytes() {
-          java.lang.Object ref = routing_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            routing_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         * Routing number
-         * </pre>
-         *
-         * <code>string routing = 1;</code>
-         */
-        public Builder setRouting(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          routing_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Routing number
-         * </pre>
-         *
-         * <code>string routing = 1;</code>
-         */
-        public Builder clearRouting() {
-          
-          routing_ = getDefaultInstance().getRouting();
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         * Routing number
-         * </pre>
-         *
-         * <code>string routing = 1;</code>
-         */
-        public Builder setRoutingBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          routing_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object account_ = "";
-        /**
-         * <code>string account = 2;</code>
-         */
-        public java.lang.String getAccount() {
-          java.lang.Object ref = account_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            account_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getAccountBytes() {
-          java.lang.Object ref = account_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            account_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public Builder setAccount(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          account_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public Builder clearAccount() {
-          
-          account_ = getDefaultInstance().getAccount();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account = 2;</code>
-         */
-        public Builder setAccountBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          account_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.Ach)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.Ach)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.Ach DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.Ach();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Ach getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Ach>
-          PARSER = new com.google.protobuf.AbstractParser<Ach>() {
-        public Ach parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Ach(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Ach> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Ach> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Ach getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface FasterPaymentsOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.FasterPayments)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string sort_code = 1;</code>
-       */
-      java.lang.String getSortCode();
-      /**
-       * <code>string sort_code = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getSortCodeBytes();
-
-      /**
-       * <code>string account_number = 2;</code>
-       */
-      java.lang.String getAccountNumber();
-      /**
-       * <code>string account_number = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getAccountNumberBytes();
-    }
-    /**
-     * <pre>
-     * Faster Payments Service transfer (UK)
-     * </pre>
-     *
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.FasterPayments}
-     */
-    public  static final class FasterPayments extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.FasterPayments)
-        FasterPaymentsOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use FasterPayments.newBuilder() to construct.
-      private FasterPayments(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private FasterPayments() {
-        sortCode_ = "";
-        accountNumber_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private FasterPayments(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                sortCode_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                accountNumber_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.class, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder.class);
-      }
-
-      public static final int SORT_CODE_FIELD_NUMBER = 1;
-      private volatile java.lang.Object sortCode_;
-      /**
-       * <code>string sort_code = 1;</code>
-       */
-      public java.lang.String getSortCode() {
-        java.lang.Object ref = sortCode_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sortCode_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string sort_code = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSortCodeBytes() {
-        java.lang.Object ref = sortCode_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sortCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int ACCOUNT_NUMBER_FIELD_NUMBER = 2;
-      private volatile java.lang.Object accountNumber_;
-      /**
-       * <code>string account_number = 2;</code>
-       */
-      public java.lang.String getAccountNumber() {
-        java.lang.Object ref = accountNumber_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          accountNumber_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string account_number = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getAccountNumberBytes() {
-        java.lang.Object ref = accountNumber_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accountNumber_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getSortCodeBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sortCode_);
-        }
-        if (!getAccountNumberBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accountNumber_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getSortCodeBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sortCode_);
-        }
-        if (!getAccountNumberBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accountNumber_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments other = (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) obj;
-
-        boolean result = true;
-        result = result && getSortCode()
-            .equals(other.getSortCode());
-        result = result && getAccountNumber()
-            .equals(other.getAccountNumber());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + SORT_CODE_FIELD_NUMBER;
-        hash = (53 * hash) + getSortCode().hashCode();
-        hash = (37 * hash) + ACCOUNT_NUMBER_FIELD_NUMBER;
-        hash = (53 * hash) + getAccountNumber().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * Faster Payments Service transfer (UK)
-       * </pre>
-       *
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.FasterPayments}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.FasterPayments)
-          com.tbuk.grpc.psd2.Linking.BankAccount.FasterPaymentsOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.class, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          sortCode_ = "";
-
-          accountNumber_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments result = new com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments(this);
-          result.sortCode_ = sortCode_;
-          result.accountNumber_ = accountNumber_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance()) return this;
-          if (!other.getSortCode().isEmpty()) {
-            sortCode_ = other.sortCode_;
-            onChanged();
-          }
-          if (!other.getAccountNumber().isEmpty()) {
-            accountNumber_ = other.accountNumber_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object sortCode_ = "";
-        /**
-         * <code>string sort_code = 1;</code>
-         */
-        public java.lang.String getSortCode() {
-          java.lang.Object ref = sortCode_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            sortCode_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string sort_code = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getSortCodeBytes() {
-          java.lang.Object ref = sortCode_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            sortCode_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string sort_code = 1;</code>
-         */
-        public Builder setSortCode(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          sortCode_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string sort_code = 1;</code>
-         */
-        public Builder clearSortCode() {
-          
-          sortCode_ = getDefaultInstance().getSortCode();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string sort_code = 1;</code>
-         */
-        public Builder setSortCodeBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          sortCode_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object accountNumber_ = "";
-        /**
-         * <code>string account_number = 2;</code>
-         */
-        public java.lang.String getAccountNumber() {
-          java.lang.Object ref = accountNumber_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            accountNumber_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string account_number = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getAccountNumberBytes() {
-          java.lang.Object ref = accountNumber_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            accountNumber_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string account_number = 2;</code>
-         */
-        public Builder setAccountNumber(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          accountNumber_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account_number = 2;</code>
-         */
-        public Builder clearAccountNumber() {
-          
-          accountNumber_ = getDefaultInstance().getAccountNumber();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string account_number = 2;</code>
-         */
-        public Builder setAccountNumberBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          accountNumber_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.FasterPayments)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.FasterPayments)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<FasterPayments>
-          PARSER = new com.google.protobuf.AbstractParser<FasterPayments>() {
-        public FasterPayments parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new FasterPayments(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<FasterPayments> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<FasterPayments> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public interface CustomOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.BankAccount.Custom)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      java.lang.String getBankId();
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getBankIdBytes();
-
-      /**
-       * <code>string payload = 2;</code>
-       */
-      java.lang.String getPayload();
-      /**
-       * <code>string payload = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getPayloadBytes();
-    }
-    /**
-     * <pre>
-     * Custom authorization
-     * </pre>
-     *
-     * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Custom}
-     */
-    public  static final class Custom extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.BankAccount.Custom)
-        CustomOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Custom.newBuilder() to construct.
-      private Custom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Custom() {
-        bankId_ = "";
-        payload_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Custom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                bankId_ = s;
-                break;
-              }
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                payload_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tbuk.grpc.psd2.Linking.BankAccount.Custom.class, com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder.class);
-      }
-
-      public static final int BANK_ID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object bankId_;
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      public java.lang.String getBankId() {
-        java.lang.Object ref = bankId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bankId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string bank_id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getBankIdBytes() {
-        java.lang.Object ref = bankId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          bankId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int PAYLOAD_FIELD_NUMBER = 2;
-      private volatile java.lang.Object payload_;
-      /**
-       * <code>string payload = 2;</code>
-       */
-      public java.lang.String getPayload() {
-        java.lang.Object ref = payload_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          payload_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string payload = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPayloadBytes() {
-        java.lang.Object ref = payload_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          payload_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getBankIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bankId_);
-        }
-        if (!getPayloadBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, payload_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getBankIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bankId_);
-        }
-        if (!getPayloadBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, payload_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Custom)) {
-          return super.equals(obj);
-        }
-        com.tbuk.grpc.psd2.Linking.BankAccount.Custom other = (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) obj;
-
-        boolean result = true;
-        result = result && getBankId()
-            .equals(other.getBankId());
-        result = result && getPayload()
-            .equals(other.getPayload());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + BANK_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getBankId().hashCode();
-        hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
-        hash = (53 * hash) + getPayload().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.BankAccount.Custom prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * <pre>
-       * Custom authorization
-       * </pre>
-       *
-       * Protobuf type {@code com.tbuk.grpc.psd2.BankAccount.Custom}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.BankAccount.Custom)
-          com.tbuk.grpc.psd2.Linking.BankAccount.CustomOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.tbuk.grpc.psd2.Linking.BankAccount.Custom.class, com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder.class);
-        }
-
-        // Construct using com.tbuk.grpc.psd2.Linking.BankAccount.Custom.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          bankId_ = "";
-
-          payload_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_descriptor;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Custom getDefaultInstanceForType() {
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance();
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Custom build() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Custom result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.tbuk.grpc.psd2.Linking.BankAccount.Custom buildPartial() {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Custom result = new com.tbuk.grpc.psd2.Linking.BankAccount.Custom(this);
-          result.bankId_ = bankId_;
-          result.payload_ = payload_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.tbuk.grpc.psd2.Linking.BankAccount.Custom) {
-            return mergeFrom((com.tbuk.grpc.psd2.Linking.BankAccount.Custom)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount.Custom other) {
-          if (other == com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance()) return this;
-          if (!other.getBankId().isEmpty()) {
-            bankId_ = other.bankId_;
-            onChanged();
-          }
-          if (!other.getPayload().isEmpty()) {
-            payload_ = other.payload_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.tbuk.grpc.psd2.Linking.BankAccount.Custom parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object bankId_ = "";
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public java.lang.String getBankId() {
-          java.lang.Object ref = bankId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            bankId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getBankIdBytes() {
-          java.lang.Object ref = bankId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            bankId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public Builder setBankId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          bankId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public Builder clearBankId() {
-          
-          bankId_ = getDefaultInstance().getBankId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string bank_id = 1;</code>
-         */
-        public Builder setBankIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          bankId_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object payload_ = "";
-        /**
-         * <code>string payload = 2;</code>
-         */
-        public java.lang.String getPayload() {
-          java.lang.Object ref = payload_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            payload_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string payload = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getPayloadBytes() {
-          java.lang.Object ref = payload_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            payload_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string payload = 2;</code>
-         */
-        public Builder setPayload(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          payload_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string payload = 2;</code>
-         */
-        public Builder clearPayload() {
-          
-          payload_ = getDefaultInstance().getPayload();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string payload = 2;</code>
-         */
-        public Builder setPayloadBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          payload_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.BankAccount.Custom)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.BankAccount.Custom)
-      private static final com.tbuk.grpc.psd2.Linking.BankAccount.Custom DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.BankAccount.Custom();
-      }
-
-      public static com.tbuk.grpc.psd2.Linking.BankAccount.Custom getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Custom>
-          PARSER = new com.google.protobuf.AbstractParser<Custom>() {
-        public Custom parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Custom(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Custom> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Custom> getParserForType() {
-        return PARSER;
-      }
-
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Custom getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    private int bitField0_;
-    private int accountCase_ = 0;
-    private java.lang.Object account_;
-    public enum AccountCase
-        implements com.google.protobuf.Internal.EnumLite {
-      TOKEN(1),
-      TOKEN_AUTHORIZATION(2),
-      SWIFT(3),
-      SEPA(4),
-      ACH(5),
-      BANK(6),
-      FASTER_PAYMENTS(7),
-      CUSTOM(8),
-      ACCOUNT_NOT_SET(0);
-      private final int value;
-      private AccountCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static AccountCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static AccountCase forNumber(int value) {
-        switch (value) {
-          case 1: return TOKEN;
-          case 2: return TOKEN_AUTHORIZATION;
-          case 3: return SWIFT;
-          case 4: return SEPA;
-          case 5: return ACH;
-          case 6: return BANK;
-          case 7: return FASTER_PAYMENTS;
-          case 8: return CUSTOM;
-          case 0: return ACCOUNT_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public AccountCase
-    getAccountCase() {
-      return AccountCase.forNumber(
-          accountCase_);
-    }
-
-    public static final int TOKEN_FIELD_NUMBER = 1;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-     */
-    public boolean hasToken() {
-      return accountCase_ == 1;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.Token getToken() {
-      if (accountCase_ == 1) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance();
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.TokenOrBuilder getTokenOrBuilder() {
-      if (accountCase_ == 1) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance();
-    }
-
-    public static final int TOKEN_AUTHORIZATION_FIELD_NUMBER = 2;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-     */
-    public boolean hasTokenAuthorization() {
-      return accountCase_ == 2;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization getTokenAuthorization() {
-      if (accountCase_ == 2) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance();
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorizationOrBuilder getTokenAuthorizationOrBuilder() {
-      if (accountCase_ == 2) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance();
-    }
-
-    public static final int SWIFT_FIELD_NUMBER = 3;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-     */
-    public boolean hasSwift() {
-      return accountCase_ == 3;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.Swift getSwift() {
-      if (accountCase_ == 3) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance();
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.SwiftOrBuilder getSwiftOrBuilder() {
-      if (accountCase_ == 3) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance();
-    }
-
-    public static final int SEPA_FIELD_NUMBER = 4;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-     */
-    public boolean hasSepa() {
-      return accountCase_ == 4;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.Sepa getSepa() {
-      if (accountCase_ == 4) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance();
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.SepaOrBuilder getSepaOrBuilder() {
-      if (accountCase_ == 4) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance();
-    }
-
-    public static final int ACH_FIELD_NUMBER = 5;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-     */
-    public boolean hasAch() {
-      return accountCase_ == 5;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.Ach getAch() {
-      if (accountCase_ == 5) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance();
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.AchOrBuilder getAchOrBuilder() {
-      if (accountCase_ == 5) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance();
-    }
-
-    public static final int BANK_FIELD_NUMBER = 6;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-     */
-    public boolean hasBank() {
-      return accountCase_ == 6;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.Bank getBank() {
-      if (accountCase_ == 6) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance();
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.BankOrBuilder getBankOrBuilder() {
-      if (accountCase_ == 6) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance();
-    }
-
-    public static final int FASTER_PAYMENTS_FIELD_NUMBER = 7;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-     */
-    public boolean hasFasterPayments() {
-      return accountCase_ == 7;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments getFasterPayments() {
-      if (accountCase_ == 7) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance();
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPaymentsOrBuilder getFasterPaymentsOrBuilder() {
-      if (accountCase_ == 7) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance();
-    }
-
-    public static final int CUSTOM_FIELD_NUMBER = 8;
-    /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+     * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
      */
     public boolean hasCustom() {
-      return accountCase_ == 8;
+      return custom_ != null;
     }
     /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+     * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
      */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.Custom getCustom() {
-      if (accountCase_ == 8) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance();
+    public com.tbuk.grpc.psd2.Linking.Custom getCustom() {
+      return custom_ == null ? com.tbuk.grpc.psd2.Linking.Custom.getDefaultInstance() : custom_;
     }
     /**
-     * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+     * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
      */
-    public com.tbuk.grpc.psd2.Linking.BankAccount.CustomOrBuilder getCustomOrBuilder() {
-      if (accountCase_ == 8) {
-         return (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_;
-      }
-      return com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance();
-    }
-
-    public static final int METADATA_FIELD_NUMBER = 9;
-    private static final class MetadataDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_MetadataEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> metadata_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetMetadata() {
-      if (metadata_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            MetadataDefaultEntryHolder.defaultEntry);
-      }
-      return metadata_;
-    }
-
-    public int getMetadataCount() {
-      return internalGetMetadata().getMap().size();
-    }
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-
-    public boolean containsMetadata(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetMetadata().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getMetadataMap()} instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
-      return getMetadataMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-
-    public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
-      return internalGetMetadata().getMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-
-    public java.lang.String getMetadataOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetMetadata().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, string&gt; metadata = 9;</code>
-     */
-
-    public java.lang.String getMetadataOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetMetadata().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int ACCOUNT_FEATURES_FIELD_NUMBER = 10;
-    private com.tbuk.grpc.psd2.Linking.AccountFeatures accountFeatures_;
-    /**
-     * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-     */
-    public boolean hasAccountFeatures() {
-      return accountFeatures_ != null;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.AccountFeatures getAccountFeatures() {
-      return accountFeatures_ == null ? com.tbuk.grpc.psd2.Linking.AccountFeatures.getDefaultInstance() : accountFeatures_;
-    }
-    /**
-     * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-     */
-    public com.tbuk.grpc.psd2.Linking.AccountFeaturesOrBuilder getAccountFeaturesOrBuilder() {
-      return getAccountFeatures();
+    public com.tbuk.grpc.psd2.Linking.CustomOrBuilder getCustomOrBuilder() {
+      return getCustom();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8479,38 +1692,8 @@ public final class Linking {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (accountCase_ == 1) {
-        output.writeMessage(1, (com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_);
-      }
-      if (accountCase_ == 2) {
-        output.writeMessage(2, (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_);
-      }
-      if (accountCase_ == 3) {
-        output.writeMessage(3, (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_);
-      }
-      if (accountCase_ == 4) {
-        output.writeMessage(4, (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_);
-      }
-      if (accountCase_ == 5) {
-        output.writeMessage(5, (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_);
-      }
-      if (accountCase_ == 6) {
-        output.writeMessage(6, (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_);
-      }
-      if (accountCase_ == 7) {
-        output.writeMessage(7, (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_);
-      }
-      if (accountCase_ == 8) {
-        output.writeMessage(8, (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_);
-      }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetMetadata(),
-          MetadataDefaultEntryHolder.defaultEntry,
-          9);
-      if (accountFeatures_ != null) {
-        output.writeMessage(10, getAccountFeatures());
+      if (custom_ != null) {
+        output.writeMessage(1, getCustom());
       }
       unknownFields.writeTo(output);
     }
@@ -8520,51 +1703,9 @@ public final class Linking {
       if (size != -1) return size;
 
       size = 0;
-      if (accountCase_ == 1) {
+      if (custom_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_);
-      }
-      if (accountCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_);
-      }
-      if (accountCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_);
-      }
-      if (accountCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_);
-      }
-      if (accountCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_);
-      }
-      if (accountCase_ == 6) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_);
-      }
-      if (accountCase_ == 7) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_);
-      }
-      if (accountCase_ == 8) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_);
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetMetadata().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        metadata__ = MetadataDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(9, metadata__);
-      }
-      if (accountFeatures_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getAccountFeatures());
+          .computeMessageSize(1, getCustom());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8582,51 +1723,10 @@ public final class Linking {
       com.tbuk.grpc.psd2.Linking.BankAccount other = (com.tbuk.grpc.psd2.Linking.BankAccount) obj;
 
       boolean result = true;
-      result = result && internalGetMetadata().equals(
-          other.internalGetMetadata());
-      result = result && (hasAccountFeatures() == other.hasAccountFeatures());
-      if (hasAccountFeatures()) {
-        result = result && getAccountFeatures()
-            .equals(other.getAccountFeatures());
-      }
-      result = result && getAccountCase().equals(
-          other.getAccountCase());
-      if (!result) return false;
-      switch (accountCase_) {
-        case 1:
-          result = result && getToken()
-              .equals(other.getToken());
-          break;
-        case 2:
-          result = result && getTokenAuthorization()
-              .equals(other.getTokenAuthorization());
-          break;
-        case 3:
-          result = result && getSwift()
-              .equals(other.getSwift());
-          break;
-        case 4:
-          result = result && getSepa()
-              .equals(other.getSepa());
-          break;
-        case 5:
-          result = result && getAch()
-              .equals(other.getAch());
-          break;
-        case 6:
-          result = result && getBank()
-              .equals(other.getBank());
-          break;
-        case 7:
-          result = result && getFasterPayments()
-              .equals(other.getFasterPayments());
-          break;
-        case 8:
-          result = result && getCustom()
-              .equals(other.getCustom());
-          break;
-        case 0:
-        default:
+      result = result && (hasCustom() == other.hasCustom());
+      if (hasCustom()) {
+        result = result && getCustom()
+            .equals(other.getCustom());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -8639,49 +1739,9 @@ public final class Linking {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetMetadata().getMap().isEmpty()) {
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetMetadata().hashCode();
-      }
-      if (hasAccountFeatures()) {
-        hash = (37 * hash) + ACCOUNT_FEATURES_FIELD_NUMBER;
-        hash = (53 * hash) + getAccountFeatures().hashCode();
-      }
-      switch (accountCase_) {
-        case 1:
-          hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-          hash = (53 * hash) + getToken().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + TOKEN_AUTHORIZATION_FIELD_NUMBER;
-          hash = (53 * hash) + getTokenAuthorization().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + SWIFT_FIELD_NUMBER;
-          hash = (53 * hash) + getSwift().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + SEPA_FIELD_NUMBER;
-          hash = (53 * hash) + getSepa().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + ACH_FIELD_NUMBER;
-          hash = (53 * hash) + getAch().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + BANK_FIELD_NUMBER;
-          hash = (53 * hash) + getBank().hashCode();
-          break;
-        case 7:
-          hash = (37 * hash) + FASTER_PAYMENTS_FIELD_NUMBER;
-          hash = (53 * hash) + getFasterPayments().hashCode();
-          break;
-        case 8:
-          hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
-          hash = (53 * hash) + getCustom().hashCode();
-          break;
-        case 0:
-        default:
+      if (hasCustom()) {
+        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+        hash = (53 * hash) + getCustom().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8788,28 +1848,6 @@ public final class Linking {
         return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 9:
-            return internalGetMetadata();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 9:
-            return internalGetMutableMetadata();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_BankAccount_fieldAccessorTable
@@ -8834,15 +1872,12 @@ public final class Linking {
       }
       public Builder clear() {
         super.clear();
-        internalGetMutableMetadata().clear();
-        if (accountFeaturesBuilder_ == null) {
-          accountFeatures_ = null;
+        if (customBuilder_ == null) {
+          custom_ = null;
         } else {
-          accountFeatures_ = null;
-          accountFeaturesBuilder_ = null;
+          custom_ = null;
+          customBuilder_ = null;
         }
-        accountCase_ = 0;
-        account_ = null;
         return this;
       }
 
@@ -8865,73 +1900,11 @@ public final class Linking {
 
       public com.tbuk.grpc.psd2.Linking.BankAccount buildPartial() {
         com.tbuk.grpc.psd2.Linking.BankAccount result = new com.tbuk.grpc.psd2.Linking.BankAccount(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (accountCase_ == 1) {
-          if (tokenBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = tokenBuilder_.build();
-          }
-        }
-        if (accountCase_ == 2) {
-          if (tokenAuthorizationBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = tokenAuthorizationBuilder_.build();
-          }
-        }
-        if (accountCase_ == 3) {
-          if (swiftBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = swiftBuilder_.build();
-          }
-        }
-        if (accountCase_ == 4) {
-          if (sepaBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = sepaBuilder_.build();
-          }
-        }
-        if (accountCase_ == 5) {
-          if (achBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = achBuilder_.build();
-          }
-        }
-        if (accountCase_ == 6) {
-          if (bankBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = bankBuilder_.build();
-          }
-        }
-        if (accountCase_ == 7) {
-          if (fasterPaymentsBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = fasterPaymentsBuilder_.build();
-          }
-        }
-        if (accountCase_ == 8) {
-          if (customBuilder_ == null) {
-            result.account_ = account_;
-          } else {
-            result.account_ = customBuilder_.build();
-          }
-        }
-        result.metadata_ = internalGetMetadata();
-        result.metadata_.makeImmutable();
-        if (accountFeaturesBuilder_ == null) {
-          result.accountFeatures_ = accountFeatures_;
+        if (customBuilder_ == null) {
+          result.custom_ = custom_;
         } else {
-          result.accountFeatures_ = accountFeaturesBuilder_.build();
+          result.custom_ = customBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
-        result.accountCase_ = accountCase_;
         onBuilt();
         return result;
       }
@@ -8973,47 +1946,8 @@ public final class Linking {
 
       public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.BankAccount other) {
         if (other == com.tbuk.grpc.psd2.Linking.BankAccount.getDefaultInstance()) return this;
-        internalGetMutableMetadata().mergeFrom(
-            other.internalGetMetadata());
-        if (other.hasAccountFeatures()) {
-          mergeAccountFeatures(other.getAccountFeatures());
-        }
-        switch (other.getAccountCase()) {
-          case TOKEN: {
-            mergeToken(other.getToken());
-            break;
-          }
-          case TOKEN_AUTHORIZATION: {
-            mergeTokenAuthorization(other.getTokenAuthorization());
-            break;
-          }
-          case SWIFT: {
-            mergeSwift(other.getSwift());
-            break;
-          }
-          case SEPA: {
-            mergeSepa(other.getSepa());
-            break;
-          }
-          case ACH: {
-            mergeAch(other.getAch());
-            break;
-          }
-          case BANK: {
-            mergeBank(other.getBank());
-            break;
-          }
-          case FASTER_PAYMENTS: {
-            mergeFasterPayments(other.getFasterPayments());
-            break;
-          }
-          case CUSTOM: {
-            mergeCustom(other.getCustom());
-            break;
-          }
-          case ACCOUNT_NOT_SET: {
-            break;
-          }
+        if (other.hasCustom()) {
+          mergeCustom(other.getCustom());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9041,1349 +1975,122 @@ public final class Linking {
         }
         return this;
       }
-      private int accountCase_ = 0;
-      private java.lang.Object account_;
-      public AccountCase
-          getAccountCase() {
-        return AccountCase.forNumber(
-            accountCase_);
-      }
 
-      public Builder clearAccount() {
-        accountCase_ = 0;
-        account_ = null;
-        onChanged();
-        return this;
-      }
-
-      private int bitField0_;
-
+      private com.tbuk.grpc.psd2.Linking.Custom custom_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Token, com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.TokenOrBuilder> tokenBuilder_;
+          com.tbuk.grpc.psd2.Linking.Custom, com.tbuk.grpc.psd2.Linking.Custom.Builder, com.tbuk.grpc.psd2.Linking.CustomOrBuilder> customBuilder_;
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public boolean hasToken() {
-        return accountCase_ == 1;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Token getToken() {
-        if (tokenBuilder_ == null) {
-          if (accountCase_ == 1) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance();
-        } else {
-          if (accountCase_ == 1) {
-            return tokenBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public Builder setToken(com.tbuk.grpc.psd2.Linking.BankAccount.Token value) {
-        if (tokenBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          account_ = value;
-          onChanged();
-        } else {
-          tokenBuilder_.setMessage(value);
-        }
-        accountCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public Builder setToken(
-          com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder builderForValue) {
-        if (tokenBuilder_ == null) {
-          account_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenBuilder_.setMessage(builderForValue.build());
-        }
-        accountCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public Builder mergeToken(com.tbuk.grpc.psd2.Linking.BankAccount.Token value) {
-        if (tokenBuilder_ == null) {
-          if (accountCase_ == 1 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Token.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            account_ = value;
-          }
-          onChanged();
-        } else {
-          if (accountCase_ == 1) {
-            tokenBuilder_.mergeFrom(value);
-          }
-          tokenBuilder_.setMessage(value);
-        }
-        accountCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public Builder clearToken() {
-        if (tokenBuilder_ == null) {
-          if (accountCase_ == 1) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
-        } else {
-          if (accountCase_ == 1) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          tokenBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder getTokenBuilder() {
-        return getTokenFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.TokenOrBuilder getTokenOrBuilder() {
-        if ((accountCase_ == 1) && (tokenBuilder_ != null)) {
-          return tokenBuilder_.getMessageOrBuilder();
-        } else {
-          if (accountCase_ == 1) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Token token = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Token, com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.TokenOrBuilder> 
-          getTokenFieldBuilder() {
-        if (tokenBuilder_ == null) {
-          if (!(accountCase_ == 1)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Token.getDefaultInstance();
-          }
-          tokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.Token, com.tbuk.grpc.psd2.Linking.BankAccount.Token.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.TokenOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.Token) account_,
-                  getParentForChildren(),
-                  isClean());
-          account_ = null;
-        }
-        accountCase_ = 1;
-        onChanged();;
-        return tokenBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorizationOrBuilder> tokenAuthorizationBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public boolean hasTokenAuthorization() {
-        return accountCase_ == 2;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization getTokenAuthorization() {
-        if (tokenAuthorizationBuilder_ == null) {
-          if (accountCase_ == 2) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance();
-        } else {
-          if (accountCase_ == 2) {
-            return tokenAuthorizationBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public Builder setTokenAuthorization(com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization value) {
-        if (tokenAuthorizationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          account_ = value;
-          onChanged();
-        } else {
-          tokenAuthorizationBuilder_.setMessage(value);
-        }
-        accountCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public Builder setTokenAuthorization(
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder builderForValue) {
-        if (tokenAuthorizationBuilder_ == null) {
-          account_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenAuthorizationBuilder_.setMessage(builderForValue.build());
-        }
-        accountCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public Builder mergeTokenAuthorization(com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization value) {
-        if (tokenAuthorizationBuilder_ == null) {
-          if (accountCase_ == 2 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            account_ = value;
-          }
-          onChanged();
-        } else {
-          if (accountCase_ == 2) {
-            tokenAuthorizationBuilder_.mergeFrom(value);
-          }
-          tokenAuthorizationBuilder_.setMessage(value);
-        }
-        accountCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public Builder clearTokenAuthorization() {
-        if (tokenAuthorizationBuilder_ == null) {
-          if (accountCase_ == 2) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
-        } else {
-          if (accountCase_ == 2) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          tokenAuthorizationBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder getTokenAuthorizationBuilder() {
-        return getTokenAuthorizationFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorizationOrBuilder getTokenAuthorizationOrBuilder() {
-        if ((accountCase_ == 2) && (tokenAuthorizationBuilder_ != null)) {
-          return tokenAuthorizationBuilder_.getMessageOrBuilder();
-        } else {
-          if (accountCase_ == 2) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.TokenAuthorization token_authorization = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorizationOrBuilder> 
-          getTokenAuthorizationFieldBuilder() {
-        if (tokenAuthorizationBuilder_ == null) {
-          if (!(accountCase_ == 2)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.getDefaultInstance();
-          }
-          tokenAuthorizationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorizationOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.TokenAuthorization) account_,
-                  getParentForChildren(),
-                  isClean());
-          account_ = null;
-        }
-        accountCase_ = 2;
-        onChanged();;
-        return tokenAuthorizationBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Swift, com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.SwiftOrBuilder> swiftBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public boolean hasSwift() {
-        return accountCase_ == 3;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Swift getSwift() {
-        if (swiftBuilder_ == null) {
-          if (accountCase_ == 3) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance();
-        } else {
-          if (accountCase_ == 3) {
-            return swiftBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public Builder setSwift(com.tbuk.grpc.psd2.Linking.BankAccount.Swift value) {
-        if (swiftBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          account_ = value;
-          onChanged();
-        } else {
-          swiftBuilder_.setMessage(value);
-        }
-        accountCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public Builder setSwift(
-          com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder builderForValue) {
-        if (swiftBuilder_ == null) {
-          account_ = builderForValue.build();
-          onChanged();
-        } else {
-          swiftBuilder_.setMessage(builderForValue.build());
-        }
-        accountCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public Builder mergeSwift(com.tbuk.grpc.psd2.Linking.BankAccount.Swift value) {
-        if (swiftBuilder_ == null) {
-          if (accountCase_ == 3 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Swift.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            account_ = value;
-          }
-          onChanged();
-        } else {
-          if (accountCase_ == 3) {
-            swiftBuilder_.mergeFrom(value);
-          }
-          swiftBuilder_.setMessage(value);
-        }
-        accountCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public Builder clearSwift() {
-        if (swiftBuilder_ == null) {
-          if (accountCase_ == 3) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
-        } else {
-          if (accountCase_ == 3) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          swiftBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder getSwiftBuilder() {
-        return getSwiftFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.SwiftOrBuilder getSwiftOrBuilder() {
-        if ((accountCase_ == 3) && (swiftBuilder_ != null)) {
-          return swiftBuilder_.getMessageOrBuilder();
-        } else {
-          if (accountCase_ == 3) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Swift swift = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Swift, com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.SwiftOrBuilder> 
-          getSwiftFieldBuilder() {
-        if (swiftBuilder_ == null) {
-          if (!(accountCase_ == 3)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Swift.getDefaultInstance();
-          }
-          swiftBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.Swift, com.tbuk.grpc.psd2.Linking.BankAccount.Swift.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.SwiftOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.Swift) account_,
-                  getParentForChildren(),
-                  isClean());
-          account_ = null;
-        }
-        accountCase_ = 3;
-        onChanged();;
-        return swiftBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Sepa, com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.SepaOrBuilder> sepaBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public boolean hasSepa() {
-        return accountCase_ == 4;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Sepa getSepa() {
-        if (sepaBuilder_ == null) {
-          if (accountCase_ == 4) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance();
-        } else {
-          if (accountCase_ == 4) {
-            return sepaBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public Builder setSepa(com.tbuk.grpc.psd2.Linking.BankAccount.Sepa value) {
-        if (sepaBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          account_ = value;
-          onChanged();
-        } else {
-          sepaBuilder_.setMessage(value);
-        }
-        accountCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public Builder setSepa(
-          com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder builderForValue) {
-        if (sepaBuilder_ == null) {
-          account_ = builderForValue.build();
-          onChanged();
-        } else {
-          sepaBuilder_.setMessage(builderForValue.build());
-        }
-        accountCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public Builder mergeSepa(com.tbuk.grpc.psd2.Linking.BankAccount.Sepa value) {
-        if (sepaBuilder_ == null) {
-          if (accountCase_ == 4 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            account_ = value;
-          }
-          onChanged();
-        } else {
-          if (accountCase_ == 4) {
-            sepaBuilder_.mergeFrom(value);
-          }
-          sepaBuilder_.setMessage(value);
-        }
-        accountCase_ = 4;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public Builder clearSepa() {
-        if (sepaBuilder_ == null) {
-          if (accountCase_ == 4) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
-        } else {
-          if (accountCase_ == 4) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          sepaBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder getSepaBuilder() {
-        return getSepaFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.SepaOrBuilder getSepaOrBuilder() {
-        if ((accountCase_ == 4) && (sepaBuilder_ != null)) {
-          return sepaBuilder_.getMessageOrBuilder();
-        } else {
-          if (accountCase_ == 4) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Sepa sepa = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Sepa, com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.SepaOrBuilder> 
-          getSepaFieldBuilder() {
-        if (sepaBuilder_ == null) {
-          if (!(accountCase_ == 4)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.getDefaultInstance();
-          }
-          sepaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.Sepa, com.tbuk.grpc.psd2.Linking.BankAccount.Sepa.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.SepaOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.Sepa) account_,
-                  getParentForChildren(),
-                  isClean());
-          account_ = null;
-        }
-        accountCase_ = 4;
-        onChanged();;
-        return sepaBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Ach, com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.AchOrBuilder> achBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public boolean hasAch() {
-        return accountCase_ == 5;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Ach getAch() {
-        if (achBuilder_ == null) {
-          if (accountCase_ == 5) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance();
-        } else {
-          if (accountCase_ == 5) {
-            return achBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public Builder setAch(com.tbuk.grpc.psd2.Linking.BankAccount.Ach value) {
-        if (achBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          account_ = value;
-          onChanged();
-        } else {
-          achBuilder_.setMessage(value);
-        }
-        accountCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public Builder setAch(
-          com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder builderForValue) {
-        if (achBuilder_ == null) {
-          account_ = builderForValue.build();
-          onChanged();
-        } else {
-          achBuilder_.setMessage(builderForValue.build());
-        }
-        accountCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public Builder mergeAch(com.tbuk.grpc.psd2.Linking.BankAccount.Ach value) {
-        if (achBuilder_ == null) {
-          if (accountCase_ == 5 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Ach.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            account_ = value;
-          }
-          onChanged();
-        } else {
-          if (accountCase_ == 5) {
-            achBuilder_.mergeFrom(value);
-          }
-          achBuilder_.setMessage(value);
-        }
-        accountCase_ = 5;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public Builder clearAch() {
-        if (achBuilder_ == null) {
-          if (accountCase_ == 5) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
-        } else {
-          if (accountCase_ == 5) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          achBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder getAchBuilder() {
-        return getAchFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.AchOrBuilder getAchOrBuilder() {
-        if ((accountCase_ == 5) && (achBuilder_ != null)) {
-          return achBuilder_.getMessageOrBuilder();
-        } else {
-          if (accountCase_ == 5) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Ach ach = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Ach, com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.AchOrBuilder> 
-          getAchFieldBuilder() {
-        if (achBuilder_ == null) {
-          if (!(accountCase_ == 5)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Ach.getDefaultInstance();
-          }
-          achBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.Ach, com.tbuk.grpc.psd2.Linking.BankAccount.Ach.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.AchOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.Ach) account_,
-                  getParentForChildren(),
-                  isClean());
-          account_ = null;
-        }
-        accountCase_ = 5;
-        onChanged();;
-        return achBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Bank, com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.BankOrBuilder> bankBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public boolean hasBank() {
-        return accountCase_ == 6;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Bank getBank() {
-        if (bankBuilder_ == null) {
-          if (accountCase_ == 6) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance();
-        } else {
-          if (accountCase_ == 6) {
-            return bankBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public Builder setBank(com.tbuk.grpc.psd2.Linking.BankAccount.Bank value) {
-        if (bankBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          account_ = value;
-          onChanged();
-        } else {
-          bankBuilder_.setMessage(value);
-        }
-        accountCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public Builder setBank(
-          com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder builderForValue) {
-        if (bankBuilder_ == null) {
-          account_ = builderForValue.build();
-          onChanged();
-        } else {
-          bankBuilder_.setMessage(builderForValue.build());
-        }
-        accountCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public Builder mergeBank(com.tbuk.grpc.psd2.Linking.BankAccount.Bank value) {
-        if (bankBuilder_ == null) {
-          if (accountCase_ == 6 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Bank.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            account_ = value;
-          }
-          onChanged();
-        } else {
-          if (accountCase_ == 6) {
-            bankBuilder_.mergeFrom(value);
-          }
-          bankBuilder_.setMessage(value);
-        }
-        accountCase_ = 6;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public Builder clearBank() {
-        if (bankBuilder_ == null) {
-          if (accountCase_ == 6) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
-        } else {
-          if (accountCase_ == 6) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          bankBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder getBankBuilder() {
-        return getBankFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.BankOrBuilder getBankOrBuilder() {
-        if ((accountCase_ == 6) && (bankBuilder_ != null)) {
-          return bankBuilder_.getMessageOrBuilder();
-        } else {
-          if (accountCase_ == 6) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Bank bank = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Bank, com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.BankOrBuilder> 
-          getBankFieldBuilder() {
-        if (bankBuilder_ == null) {
-          if (!(accountCase_ == 6)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Bank.getDefaultInstance();
-          }
-          bankBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.Bank, com.tbuk.grpc.psd2.Linking.BankAccount.Bank.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.BankOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.Bank) account_,
-                  getParentForChildren(),
-                  isClean());
-          account_ = null;
-        }
-        accountCase_ = 6;
-        onChanged();;
-        return bankBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPaymentsOrBuilder> fasterPaymentsBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public boolean hasFasterPayments() {
-        return accountCase_ == 7;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments getFasterPayments() {
-        if (fasterPaymentsBuilder_ == null) {
-          if (accountCase_ == 7) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance();
-        } else {
-          if (accountCase_ == 7) {
-            return fasterPaymentsBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public Builder setFasterPayments(com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments value) {
-        if (fasterPaymentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          account_ = value;
-          onChanged();
-        } else {
-          fasterPaymentsBuilder_.setMessage(value);
-        }
-        accountCase_ = 7;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public Builder setFasterPayments(
-          com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder builderForValue) {
-        if (fasterPaymentsBuilder_ == null) {
-          account_ = builderForValue.build();
-          onChanged();
-        } else {
-          fasterPaymentsBuilder_.setMessage(builderForValue.build());
-        }
-        accountCase_ = 7;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public Builder mergeFasterPayments(com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments value) {
-        if (fasterPaymentsBuilder_ == null) {
-          if (accountCase_ == 7 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            account_ = value;
-          }
-          onChanged();
-        } else {
-          if (accountCase_ == 7) {
-            fasterPaymentsBuilder_.mergeFrom(value);
-          }
-          fasterPaymentsBuilder_.setMessage(value);
-        }
-        accountCase_ = 7;
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public Builder clearFasterPayments() {
-        if (fasterPaymentsBuilder_ == null) {
-          if (accountCase_ == 7) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
-        } else {
-          if (accountCase_ == 7) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          fasterPaymentsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder getFasterPaymentsBuilder() {
-        return getFasterPaymentsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.FasterPaymentsOrBuilder getFasterPaymentsOrBuilder() {
-        if ((accountCase_ == 7) && (fasterPaymentsBuilder_ != null)) {
-          return fasterPaymentsBuilder_.getMessageOrBuilder();
-        } else {
-          if (accountCase_ == 7) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.FasterPayments faster_payments = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPaymentsOrBuilder> 
-          getFasterPaymentsFieldBuilder() {
-        if (fasterPaymentsBuilder_ == null) {
-          if (!(accountCase_ == 7)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.getDefaultInstance();
-          }
-          fasterPaymentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.FasterPaymentsOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.FasterPayments) account_,
-                  getParentForChildren(),
-                  isClean());
-          account_ = null;
-        }
-        accountCase_ = 7;
-        onChanged();;
-        return fasterPaymentsBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Custom, com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.CustomOrBuilder> customBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
       public boolean hasCustom() {
-        return accountCase_ == 8;
+        return customBuilder_ != null || custom_ != null;
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Custom getCustom() {
+      public com.tbuk.grpc.psd2.Linking.Custom getCustom() {
         if (customBuilder_ == null) {
-          if (accountCase_ == 8) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance();
+          return custom_ == null ? com.tbuk.grpc.psd2.Linking.Custom.getDefaultInstance() : custom_;
         } else {
-          if (accountCase_ == 8) {
-            return customBuilder_.getMessage();
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance();
+          return customBuilder_.getMessage();
         }
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
-      public Builder setCustom(com.tbuk.grpc.psd2.Linking.BankAccount.Custom value) {
+      public Builder setCustom(com.tbuk.grpc.psd2.Linking.Custom value) {
         if (customBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          account_ = value;
+          custom_ = value;
           onChanged();
         } else {
           customBuilder_.setMessage(value);
         }
-        accountCase_ = 8;
+
         return this;
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
       public Builder setCustom(
-          com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder builderForValue) {
+          com.tbuk.grpc.psd2.Linking.Custom.Builder builderForValue) {
         if (customBuilder_ == null) {
-          account_ = builderForValue.build();
+          custom_ = builderForValue.build();
           onChanged();
         } else {
           customBuilder_.setMessage(builderForValue.build());
         }
-        accountCase_ = 8;
+
         return this;
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
-      public Builder mergeCustom(com.tbuk.grpc.psd2.Linking.BankAccount.Custom value) {
+      public Builder mergeCustom(com.tbuk.grpc.psd2.Linking.Custom value) {
         if (customBuilder_ == null) {
-          if (accountCase_ == 8 &&
-              account_ != com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance()) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Custom.newBuilder((com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_)
-                .mergeFrom(value).buildPartial();
+          if (custom_ != null) {
+            custom_ =
+              com.tbuk.grpc.psd2.Linking.Custom.newBuilder(custom_).mergeFrom(value).buildPartial();
           } else {
-            account_ = value;
+            custom_ = value;
           }
           onChanged();
         } else {
-          if (accountCase_ == 8) {
-            customBuilder_.mergeFrom(value);
-          }
-          customBuilder_.setMessage(value);
+          customBuilder_.mergeFrom(value);
         }
-        accountCase_ = 8;
+
         return this;
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
       public Builder clearCustom() {
         if (customBuilder_ == null) {
-          if (accountCase_ == 8) {
-            accountCase_ = 0;
-            account_ = null;
-            onChanged();
-          }
+          custom_ = null;
+          onChanged();
         } else {
-          if (accountCase_ == 8) {
-            accountCase_ = 0;
-            account_ = null;
-          }
-          customBuilder_.clear();
+          custom_ = null;
+          customBuilder_ = null;
         }
+
         return this;
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder getCustomBuilder() {
+      public com.tbuk.grpc.psd2.Linking.Custom.Builder getCustomBuilder() {
+        
+        onChanged();
         return getCustomFieldBuilder().getBuilder();
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
-      public com.tbuk.grpc.psd2.Linking.BankAccount.CustomOrBuilder getCustomOrBuilder() {
-        if ((accountCase_ == 8) && (customBuilder_ != null)) {
+      public com.tbuk.grpc.psd2.Linking.CustomOrBuilder getCustomOrBuilder() {
+        if (customBuilder_ != null) {
           return customBuilder_.getMessageOrBuilder();
         } else {
-          if (accountCase_ == 8) {
-            return (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_;
-          }
-          return com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance();
+          return custom_ == null ?
+              com.tbuk.grpc.psd2.Linking.Custom.getDefaultInstance() : custom_;
         }
       }
       /**
-       * <code>.com.tbuk.grpc.psd2.BankAccount.Custom custom = 8;</code>
+       * <code>.com.tbuk.grpc.psd2.Custom custom = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.BankAccount.Custom, com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.CustomOrBuilder> 
+          com.tbuk.grpc.psd2.Linking.Custom, com.tbuk.grpc.psd2.Linking.Custom.Builder, com.tbuk.grpc.psd2.Linking.CustomOrBuilder> 
           getCustomFieldBuilder() {
         if (customBuilder_ == null) {
-          if (!(accountCase_ == 8)) {
-            account_ = com.tbuk.grpc.psd2.Linking.BankAccount.Custom.getDefaultInstance();
-          }
           customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.BankAccount.Custom, com.tbuk.grpc.psd2.Linking.BankAccount.Custom.Builder, com.tbuk.grpc.psd2.Linking.BankAccount.CustomOrBuilder>(
-                  (com.tbuk.grpc.psd2.Linking.BankAccount.Custom) account_,
+              com.tbuk.grpc.psd2.Linking.Custom, com.tbuk.grpc.psd2.Linking.Custom.Builder, com.tbuk.grpc.psd2.Linking.CustomOrBuilder>(
+                  getCustom(),
                   getParentForChildren(),
                   isClean());
-          account_ = null;
+          custom_ = null;
         }
-        accountCase_ = 8;
-        onChanged();;
         return customBuilder_;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> metadata_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetadata() {
-        if (metadata_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              MetadataDefaultEntryHolder.defaultEntry);
-        }
-        return metadata_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetadata() {
-        onChanged();;
-        if (metadata_ == null) {
-          metadata_ = com.google.protobuf.MapField.newMapField(
-              MetadataDefaultEntryHolder.defaultEntry);
-        }
-        if (!metadata_.isMutable()) {
-          metadata_ = metadata_.copy();
-        }
-        return metadata_;
-      }
-
-      public int getMetadataCount() {
-        return internalGetMetadata().getMap().size();
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 9;</code>
-       */
-
-      public boolean containsMetadata(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetMetadata().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getMetadataMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getMetadata() {
-        return getMetadataMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 9;</code>
-       */
-
-      public java.util.Map<java.lang.String, java.lang.String> getMetadataMap() {
-        return internalGetMetadata().getMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 9;</code>
-       */
-
-      public java.lang.String getMetadataOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetMetadata().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 9;</code>
-       */
-
-      public java.lang.String getMetadataOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetMetadata().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearMetadata() {
-        internalGetMutableMetadata().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 9;</code>
-       */
-
-      public Builder removeMetadata(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableMetadata().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetadata() {
-        return internalGetMutableMetadata().getMutableMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 9;</code>
-       */
-      public Builder putMetadata(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableMetadata().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;string, string&gt; metadata = 9;</code>
-       */
-
-      public Builder putAllMetadata(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableMetadata().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
-      private com.tbuk.grpc.psd2.Linking.AccountFeatures accountFeatures_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.AccountFeatures, com.tbuk.grpc.psd2.Linking.AccountFeatures.Builder, com.tbuk.grpc.psd2.Linking.AccountFeaturesOrBuilder> accountFeaturesBuilder_;
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public boolean hasAccountFeatures() {
-        return accountFeaturesBuilder_ != null || accountFeatures_ != null;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.AccountFeatures getAccountFeatures() {
-        if (accountFeaturesBuilder_ == null) {
-          return accountFeatures_ == null ? com.tbuk.grpc.psd2.Linking.AccountFeatures.getDefaultInstance() : accountFeatures_;
-        } else {
-          return accountFeaturesBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public Builder setAccountFeatures(com.tbuk.grpc.psd2.Linking.AccountFeatures value) {
-        if (accountFeaturesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          accountFeatures_ = value;
-          onChanged();
-        } else {
-          accountFeaturesBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public Builder setAccountFeatures(
-          com.tbuk.grpc.psd2.Linking.AccountFeatures.Builder builderForValue) {
-        if (accountFeaturesBuilder_ == null) {
-          accountFeatures_ = builderForValue.build();
-          onChanged();
-        } else {
-          accountFeaturesBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public Builder mergeAccountFeatures(com.tbuk.grpc.psd2.Linking.AccountFeatures value) {
-        if (accountFeaturesBuilder_ == null) {
-          if (accountFeatures_ != null) {
-            accountFeatures_ =
-              com.tbuk.grpc.psd2.Linking.AccountFeatures.newBuilder(accountFeatures_).mergeFrom(value).buildPartial();
-          } else {
-            accountFeatures_ = value;
-          }
-          onChanged();
-        } else {
-          accountFeaturesBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public Builder clearAccountFeatures() {
-        if (accountFeaturesBuilder_ == null) {
-          accountFeatures_ = null;
-          onChanged();
-        } else {
-          accountFeatures_ = null;
-          accountFeaturesBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.AccountFeatures.Builder getAccountFeaturesBuilder() {
-        
-        onChanged();
-        return getAccountFeaturesFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      public com.tbuk.grpc.psd2.Linking.AccountFeaturesOrBuilder getAccountFeaturesOrBuilder() {
-        if (accountFeaturesBuilder_ != null) {
-          return accountFeaturesBuilder_.getMessageOrBuilder();
-        } else {
-          return accountFeatures_ == null ?
-              com.tbuk.grpc.psd2.Linking.AccountFeatures.getDefaultInstance() : accountFeatures_;
-        }
-      }
-      /**
-       * <code>.com.tbuk.grpc.psd2.AccountFeatures account_features = 10;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tbuk.grpc.psd2.Linking.AccountFeatures, com.tbuk.grpc.psd2.Linking.AccountFeatures.Builder, com.tbuk.grpc.psd2.Linking.AccountFeaturesOrBuilder> 
-          getAccountFeaturesFieldBuilder() {
-        if (accountFeaturesBuilder_ == null) {
-          accountFeaturesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tbuk.grpc.psd2.Linking.AccountFeatures, com.tbuk.grpc.psd2.Linking.AccountFeatures.Builder, com.tbuk.grpc.psd2.Linking.AccountFeaturesOrBuilder>(
-                  getAccountFeatures(),
-                  getParentForChildren(),
-                  isClean());
-          accountFeatures_ = null;
-        }
-        return accountFeaturesBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10429,6 +2136,676 @@ public final class Linking {
     }
 
     public com.tbuk.grpc.psd2.Linking.BankAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CustomOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.tbuk.grpc.psd2.Custom)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string bankId = 1;</code>
+     */
+    java.lang.String getBankId();
+    /**
+     * <code>string bankId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getBankIdBytes();
+
+    /**
+     * <code>string payload = 2;</code>
+     */
+    java.lang.String getPayload();
+    /**
+     * <code>string payload = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getPayloadBytes();
+  }
+  /**
+   * <pre>
+   * Custom authorization
+   * </pre>
+   *
+   * Protobuf type {@code com.tbuk.grpc.psd2.Custom}
+   */
+  public  static final class Custom extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.tbuk.grpc.psd2.Custom)
+      CustomOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Custom.newBuilder() to construct.
+    private Custom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Custom() {
+      bankId_ = "";
+      payload_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Custom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bankId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              payload_ = s;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_Custom_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_Custom_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tbuk.grpc.psd2.Linking.Custom.class, com.tbuk.grpc.psd2.Linking.Custom.Builder.class);
+    }
+
+    public static final int BANKID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object bankId_;
+    /**
+     * <code>string bankId = 1;</code>
+     */
+    public java.lang.String getBankId() {
+      java.lang.Object ref = bankId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bankId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bankId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBankIdBytes() {
+      java.lang.Object ref = bankId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bankId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 2;
+    private volatile java.lang.Object payload_;
+    /**
+     * <code>string payload = 2;</code>
+     */
+    public java.lang.String getPayload() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payload_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string payload = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPayloadBytes() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payload_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getBankIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bankId_);
+      }
+      if (!getPayloadBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, payload_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getBankIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bankId_);
+      }
+      if (!getPayloadBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, payload_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tbuk.grpc.psd2.Linking.Custom)) {
+        return super.equals(obj);
+      }
+      com.tbuk.grpc.psd2.Linking.Custom other = (com.tbuk.grpc.psd2.Linking.Custom) obj;
+
+      boolean result = true;
+      result = result && getBankId()
+          .equals(other.getBankId());
+      result = result && getPayload()
+          .equals(other.getPayload());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BANKID_FIELD_NUMBER;
+      hash = (53 * hash) + getBankId().hashCode();
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tbuk.grpc.psd2.Linking.Custom parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tbuk.grpc.psd2.Linking.Custom prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Custom authorization
+     * </pre>
+     *
+     * Protobuf type {@code com.tbuk.grpc.psd2.Custom}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.tbuk.grpc.psd2.Custom)
+        com.tbuk.grpc.psd2.Linking.CustomOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_Custom_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_Custom_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tbuk.grpc.psd2.Linking.Custom.class, com.tbuk.grpc.psd2.Linking.Custom.Builder.class);
+      }
+
+      // Construct using com.tbuk.grpc.psd2.Linking.Custom.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        bankId_ = "";
+
+        payload_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tbuk.grpc.psd2.Linking.internal_static_com_tbuk_grpc_psd2_Custom_descriptor;
+      }
+
+      public com.tbuk.grpc.psd2.Linking.Custom getDefaultInstanceForType() {
+        return com.tbuk.grpc.psd2.Linking.Custom.getDefaultInstance();
+      }
+
+      public com.tbuk.grpc.psd2.Linking.Custom build() {
+        com.tbuk.grpc.psd2.Linking.Custom result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.tbuk.grpc.psd2.Linking.Custom buildPartial() {
+        com.tbuk.grpc.psd2.Linking.Custom result = new com.tbuk.grpc.psd2.Linking.Custom(this);
+        result.bankId_ = bankId_;
+        result.payload_ = payload_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tbuk.grpc.psd2.Linking.Custom) {
+          return mergeFrom((com.tbuk.grpc.psd2.Linking.Custom)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tbuk.grpc.psd2.Linking.Custom other) {
+        if (other == com.tbuk.grpc.psd2.Linking.Custom.getDefaultInstance()) return this;
+        if (!other.getBankId().isEmpty()) {
+          bankId_ = other.bankId_;
+          onChanged();
+        }
+        if (!other.getPayload().isEmpty()) {
+          payload_ = other.payload_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tbuk.grpc.psd2.Linking.Custom parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tbuk.grpc.psd2.Linking.Custom) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object bankId_ = "";
+      /**
+       * <code>string bankId = 1;</code>
+       */
+      public java.lang.String getBankId() {
+        java.lang.Object ref = bankId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bankId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bankId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBankIdBytes() {
+        java.lang.Object ref = bankId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bankId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bankId = 1;</code>
+       */
+      public Builder setBankId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bankId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bankId = 1;</code>
+       */
+      public Builder clearBankId() {
+        
+        bankId_ = getDefaultInstance().getBankId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bankId = 1;</code>
+       */
+      public Builder setBankIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bankId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object payload_ = "";
+      /**
+       * <code>string payload = 2;</code>
+       */
+      public java.lang.String getPayload() {
+        java.lang.Object ref = payload_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payload_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string payload = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPayloadBytes() {
+        java.lang.Object ref = payload_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payload_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string payload = 2;</code>
+       */
+      public Builder setPayload(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string payload = 2;</code>
+       */
+      public Builder clearPayload() {
+        
+        payload_ = getDefaultInstance().getPayload();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string payload = 2;</code>
+       */
+      public Builder setPayloadBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.tbuk.grpc.psd2.Custom)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.tbuk.grpc.psd2.Custom)
+    private static final com.tbuk.grpc.psd2.Linking.Custom DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tbuk.grpc.psd2.Linking.Custom();
+    }
+
+    public static com.tbuk.grpc.psd2.Linking.Custom getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Custom>
+        PARSER = new com.google.protobuf.AbstractParser<Custom>() {
+      public Custom parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Custom(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Custom> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Custom> getParserForType() {
+      return PARSER;
+    }
+
+    public com.tbuk.grpc.psd2.Linking.Custom getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16588,11 +8965,6 @@ public final class Linking {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tbuk_grpc_psd2_PlaintextBankAuthorization_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16603,50 +8975,10 @@ public final class Linking {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_tbuk_grpc_psd2_BankAccount_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Token_descriptor;
+    internal_static_com_tbuk_grpc_psd2_Custom_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_Token_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_tbuk_grpc_psd2_BankAccount_MetadataEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_tbuk_grpc_psd2_BankAccount_MetadataEntry_fieldAccessorTable;
+      internal_static_com_tbuk_grpc_psd2_Custom_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_tbuk_grpc_psd2_AccountFeatures_descriptor;
   private static final 
@@ -16689,64 +9021,37 @@ public final class Linking {
       "\n\rlinking.proto\022\022com.tbuk.grpc.psd2\032\034goo" +
       "gle/api/annotations.proto\032\033google/protob" +
       "uf/empty.proto\"2\n\033GetBankAuthorizationRe" +
-      "quest\022\023\n\013accessToken\030\001 \001(\t\"h\n\034GetBankAut" +
-      "horizationResponse\022\016\n\006bankId\030\001 \001(\t\0228\n\rse" +
-      "aledMessage\030\002 \003(\0132!.com.tbuk.grpc.psd2.S" +
-      "ealedMessage\"\216\001\n\032PlaintextBankAuthorizat" +
-      "ion\022\021\n\tmember_id\030\001 \001(\t\022\024\n\014account_name\030\002" +
-      " \001(\t\0220\n\007account\030\003 \001(\0132\037.com.tbuk.grpc.ps" +
-      "d2.BankAccount\022\025\n\rexpiration_ms\030\004 \001(\003\"\252\010" +
-      "\n\013BankAccount\0226\n\005token\030\001 \001(\0132%.com.tbuk." +
-      "grpc.psd2.BankAccount.TokenH\000\022Q\n\023token_a" +
-      "uthorization\030\002 \001(\01322.com.tbuk.grpc.psd2." +
-      "BankAccount.TokenAuthorizationH\000\0226\n\005swif" +
-      "t\030\003 \001(\0132%.com.tbuk.grpc.psd2.BankAccount" +
-      ".SwiftH\000\0224\n\004sepa\030\004 \001(\0132$.com.tbuk.grpc.p" +
-      "sd2.BankAccount.SepaH\000\0222\n\003ach\030\005 \001(\0132#.co" +
-      "m.tbuk.grpc.psd2.BankAccount.AchH\000\0224\n\004ba" +
-      "nk\030\006 \001(\0132$.com.tbuk.grpc.psd2.BankAccoun" +
-      "t.BankH\000\022I\n\017faster_payments\030\007 \001(\0132..com." +
-      "tbuk.grpc.psd2.BankAccount.FasterPayment" +
-      "sH\000\0228\n\006custom\030\010 \001(\0132&.com.tbuk.grpc.psd2" +
-      ".BankAccount.CustomH\000\022?\n\010metadata\030\t \003(\0132" +
-      "-.com.tbuk.grpc.psd2.BankAccount.Metadat" +
-      "aEntry\022=\n\020account_features\030\n \001(\0132#.com.t" +
-      "buk.grpc.psd2.AccountFeatures\032.\n\005Token\022\021" +
-      "\n\tmember_id\030\001 \001(\t\022\022\n\naccount_id\030\002 \001(\t\032R\n" +
-      "\022TokenAuthorization\022<\n\rauthorization\030\001 \001" +
-      "(\0132%.com.tbuk.grpc.psd2.BankAuthorizatio" +
-      "n\032\027\n\004Bank\022\017\n\007bank_id\030\001 \001(\t\032%\n\005Swift\022\013\n\003b" +
-      "ic\030\001 \001(\t\022\017\n\007account\030\002 \001(\t\032!\n\004Sepa\022\014\n\004iba" +
-      "n\030\001 \001(\t\022\013\n\003bic\030\002 \001(\t\032\'\n\003Ach\022\017\n\007routing\030\001" +
-      " \001(\t\022\017\n\007account\030\002 \001(\t\032;\n\016FasterPayments\022" +
-      "\021\n\tsort_code\030\001 \001(\t\022\026\n\016account_number\030\002 \001" +
-      "(\t\032*\n\006Custom\022\017\n\007bank_id\030\001 \001(\t\022\017\n\007payload" +
-      "\030\002 \001(\t\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001B\t\n\007account\"\252\001\n\017AccountFe" +
-      "atures\022\030\n\020supports_payment\030\001 \001(\010\022\034\n\024supp" +
-      "orts_information\030\002 \001(\010\022\036\n\026requires_exter" +
-      "nal_auth\030\003 \001(\010\022\035\n\025supports_send_payment\030" +
-      "\004 \001(\010\022 \n\030supports_receive_payment\030\005 \001(\010\"" +
-      "Y\n\021BankAuthorization\022\017\n\007bank_id\030\001 \001(\t\0223\n" +
-      "\010accounts\030\002 \003(\0132!.com.tbuk.grpc.psd2.Sea" +
-      "ledMessage\"\360\003\n\rSealedMessage\022\022\n\ncipherte" +
-      "xt\030\001 \001(\t\022<\n\004noop\030\004 \001(\0132,.com.tbuk.grpc.p" +
-      "sd2.SealedMessage.NoopMethodH\000\022:\n\003rsa\030\006 " +
-      "\001(\0132+.com.tbuk.grpc.psd2.SealedMessage.R" +
-      "saMethodH\000\022A\n\007rsa_aes\030\007 \001(\0132..com.tbuk.g" +
-      "rpc.psd2.SealedMessage.RsaAesMethodH\000\032\014\n" +
-      "\nNoopMethod\032[\n\tRsaMethod\022\016\n\006key_id\030\001 \001(\t" +
-      "\022\021\n\talgorithm\030\002 \001(\t\022\021\n\tsignature\030\003 \001(\t\022\030" +
-      "\n\020signature_key_id\030\004 \001(\t\032\230\001\n\014RsaAesMetho" +
-      "d\022\022\n\nrsa_key_id\030\001 \001(\t\022\025\n\rrsa_algorithm\030\002" +
-      " \001(\t\022\025\n\raes_algorithm\030\003 \001(\t\022\031\n\021encrypted" +
-      "_aes_key\030\005 \001(\t\022\021\n\tsignature\030\006 \001(\t\022\030\n\020sig" +
-      "nature_key_id\030\007 \001(\tB\010\n\006method2\302\001\n\025Accoun" +
-      "tLinkingService\022\250\001\n\024GetBankAuthorization" +
-      "\022/.com.tbuk.grpc.psd2.GetBankAuthorizati" +
-      "onRequest\0320.com.tbuk.grpc.psd2.GetBankAu" +
-      "thorizationResponse\"-\202\323\344\223\002\'\022%/linking/au" +
-      "thorizations/{accessToken}b\006proto3"
+      "quest\022\023\n\013accessToken\030\001 \001(\t\"\216\001\n\032Plaintext" +
+      "BankAuthorization\022\021\n\tmember_id\030\001 \001(\t\022\024\n\014" +
+      "account_name\030\002 \001(\t\0220\n\007account\030\003 \001(\0132\037.co" +
+      "m.tbuk.grpc.psd2.BankAccount\022\025\n\rexpirati" +
+      "on_ms\030\004 \001(\003\"9\n\013BankAccount\022*\n\006custom\030\001 \001" +
+      "(\0132\032.com.tbuk.grpc.psd2.Custom\")\n\006Custom" +
+      "\022\016\n\006bankId\030\001 \001(\t\022\017\n\007payload\030\002 \001(\t\"\252\001\n\017Ac" +
+      "countFeatures\022\030\n\020supports_payment\030\001 \001(\010\022" +
+      "\034\n\024supports_information\030\002 \001(\010\022\036\n\026require" +
+      "s_external_auth\030\003 \001(\010\022\035\n\025supports_send_p" +
+      "ayment\030\004 \001(\010\022 \n\030supports_receive_payment" +
+      "\030\005 \001(\010\"Y\n\021BankAuthorization\022\017\n\007bank_id\030\001" +
+      " \001(\t\0223\n\010accounts\030\002 \003(\0132!.com.tbuk.grpc.p" +
+      "sd2.SealedMessage\"\360\003\n\rSealedMessage\022\022\n\nc" +
+      "iphertext\030\001 \001(\t\022<\n\004noop\030\004 \001(\0132,.com.tbuk" +
+      ".grpc.psd2.SealedMessage.NoopMethodH\000\022:\n" +
+      "\003rsa\030\006 \001(\0132+.com.tbuk.grpc.psd2.SealedMe" +
+      "ssage.RsaMethodH\000\022A\n\007rsa_aes\030\007 \001(\0132..com" +
+      ".tbuk.grpc.psd2.SealedMessage.RsaAesMeth" +
+      "odH\000\032\014\n\nNoopMethod\032[\n\tRsaMethod\022\016\n\006key_i" +
+      "d\030\001 \001(\t\022\021\n\talgorithm\030\002 \001(\t\022\021\n\tsignature\030" +
+      "\003 \001(\t\022\030\n\020signature_key_id\030\004 \001(\t\032\230\001\n\014RsaA" +
+      "esMethod\022\022\n\nrsa_key_id\030\001 \001(\t\022\025\n\rrsa_algo" +
+      "rithm\030\002 \001(\t\022\025\n\raes_algorithm\030\003 \001(\t\022\031\n\021en" +
+      "crypted_aes_key\030\005 \001(\t\022\021\n\tsignature\030\006 \001(\t" +
+      "\022\030\n\020signature_key_id\030\007 \001(\tB\010\n\006method2\267\001\n" +
+      "\025AccountLinkingService\022\235\001\n\024GetBankAuthor" +
+      "ization\022/.com.tbuk.grpc.psd2.GetBankAuth" +
+      "orizationRequest\032%.com.tbuk.grpc.psd2.Ba" +
+      "nkAuthorization\"-\202\323\344\223\002\'\022%/linking/author" +
+      "izations/{accessToken}b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16768,78 +9073,24 @@ public final class Linking {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationRequest_descriptor,
         new java.lang.String[] { "AccessToken", });
-    internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_GetBankAuthorizationResponse_descriptor,
-        new java.lang.String[] { "BankId", "SealedMessage", });
     internal_static_com_tbuk_grpc_psd2_PlaintextBankAuthorization_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_com_tbuk_grpc_psd2_PlaintextBankAuthorization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2_PlaintextBankAuthorization_descriptor,
         new java.lang.String[] { "MemberId", "AccountName", "Account", "ExpirationMs", });
     internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_tbuk_grpc_psd2_BankAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor,
-        new java.lang.String[] { "Token", "TokenAuthorization", "Swift", "Sepa", "Ach", "Bank", "FasterPayments", "Custom", "Metadata", "AccountFeatures", "Account", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Token_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(0);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Token_fieldAccessorTable = new
+        new java.lang.String[] { "Custom", });
+    internal_static_com_tbuk_grpc_psd2_Custom_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_tbuk_grpc_psd2_Custom_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_Token_descriptor,
-        new java.lang.String[] { "MemberId", "AccountId", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(1);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_TokenAuthorization_descriptor,
-        new java.lang.String[] { "Authorization", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(2);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_Bank_descriptor,
-        new java.lang.String[] { "BankId", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(3);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_Swift_descriptor,
-        new java.lang.String[] { "Bic", "Account", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(4);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_Sepa_descriptor,
-        new java.lang.String[] { "Iban", "Bic", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(5);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_Ach_descriptor,
-        new java.lang.String[] { "Routing", "Account", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(6);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_FasterPayments_descriptor,
-        new java.lang.String[] { "SortCode", "AccountNumber", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(7);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_Custom_descriptor,
+        internal_static_com_tbuk_grpc_psd2_Custom_descriptor,
         new java.lang.String[] { "BankId", "Payload", });
-    internal_static_com_tbuk_grpc_psd2_BankAccount_MetadataEntry_descriptor =
-      internal_static_com_tbuk_grpc_psd2_BankAccount_descriptor.getNestedTypes().get(8);
-    internal_static_com_tbuk_grpc_psd2_BankAccount_MetadataEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_tbuk_grpc_psd2_BankAccount_MetadataEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
     internal_static_com_tbuk_grpc_psd2_AccountFeatures_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_tbuk_grpc_psd2_AccountFeatures_fieldAccessorTable = new

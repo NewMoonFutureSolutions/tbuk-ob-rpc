@@ -9,11 +9,6 @@ message GetBankAuthorizationRequest {
     string accessToken = 1;
 }
 
-message GetBankAuthorizationResponse {
-    string bankId=1;
-    repeated SealedMessage sealedMessage = 2;
-}
-
 
 // Chipper Text'in icerigi de bu olacakmis aq
 message PlaintextBankAuthorization {
@@ -27,64 +22,13 @@ message PlaintextBankAuthorization {
 
 message BankAccount {
 
-    message Token {
-        string member_id = 1;
-        string account_id = 2;
-    }
+    Custom custom=1;
 
-    // One-time encrypted authorization for an account
-    message TokenAuthorization {
-        BankAuthorization authorization = 1;
-    }
-
-    // Source account managed by a coop bank
-    message Bank {
-        string bank_id = 1;
-    }
-
-    // SWIFT transfer
-    message Swift {
-        string bic = 1;     // BIC code AAAABBCCDD
-        string account = 2;
-    }
-
-    // SEPA transfer.
-    message Sepa {
-        string iban = 1;    // International Bank Account Number
-        string bic = 2;     // Bic code. Optional, except for non EEA countries
-    }
-
-    // ACH transfer
-    message Ach {
-        string routing = 1; // Routing number
-        string account = 2;
-    }
-
-    // Faster Payments Service transfer (UK)
-    message FasterPayments {
-        string sort_code = 1;
-        string account_number = 2;
-    }
-
-    // Custom authorization
-    message Custom {
-        string bank_id = 1;
-        string payload = 2;
-    }
-
-    oneof account {
-        Token token = 1;
-        TokenAuthorization token_authorization = 2;
-        Swift swift = 3;
-        Sepa sepa = 4;
-        Ach ach = 5;
-        Bank bank = 6;
-        FasterPayments faster_payments = 7;
-        Custom custom = 8;
-    }
-
-    map<string, string> metadata = 9;
-    AccountFeatures account_features = 10;
+}
+// Custom authorization
+message Custom {
+    string bankId = 1;
+    string payload = 2;
 }
 
 message AccountFeatures {
@@ -136,7 +80,7 @@ message SealedMessage {
 // ====== ***
 
 service AccountLinkingService {
-    rpc GetBankAuthorization (GetBankAuthorizationRequest) returns (GetBankAuthorizationResponse) {
+    rpc GetBankAuthorization (GetBankAuthorizationRequest) returns (BankAuthorization) {
         option (google.api.http) = {
         get: "/linking/authorizations/{accessToken}"
     };

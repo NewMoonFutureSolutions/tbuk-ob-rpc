@@ -7,6 +7,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 
 // ***** REQUEST & RESPONSE messages *****
+// Balance
 message BalanceRequest {
     string bankAccountId = 1;
 }
@@ -17,7 +18,7 @@ message BalanceResponse {
     string updatedAt = 3;
     //repeated TypedBalance other_balances = 4; // optional
 }
-
+// transaction
 message TransactionRequest {
     string transactionId = 1;
     string bankAccountId = 2;
@@ -26,6 +27,7 @@ message TransactionRequest {
 message TransactionResponse {
     Transaction transaction = 1;
 }
+// transactions
 message TransactionsRequest {
     BankAccount account = 1;
     int32 limit = 2;
@@ -48,9 +50,9 @@ message TransactionsPage {
     Money amount = 4; // Transaction amount.
     string description = 5; // Optional description
 
-    string token_id = 6;                          // Points to the token, only set for Token transactions.
-    string token_transfer_id = 7;                 // Points to the token transfer, only set for Token transactions.
-    int64 created_at_ms = 8;                      // Creation time
+    string tokenId = 6;                          // Points to the token, only set for Token transactions.
+    string tokenTransferId = 7;                 // Points to the token transfer, only set for Token transactions.
+    string createdAt = 8;                      // Creation time
 
 }
 
@@ -159,9 +161,11 @@ enum AccountType {
     LOAN = 4;
 }
 
+// 1 post account
 message CreateAccountResponse{
   string accountId=1;
 }
+// Destinations
 message DestinationRequest{
   string bankAccountId=1;
 }
@@ -226,6 +230,7 @@ message CustomerData{
         string full = 9;
 
     }
+// Account Details
 
 message AccountDetailsRequest{
  string bankAccountId=1;
@@ -241,6 +246,8 @@ message Entry{
     string key=1;
     string value=2;
 }
+
+// unlink
 message UnlinkRequest{
   string bankAccountId=1;
 }

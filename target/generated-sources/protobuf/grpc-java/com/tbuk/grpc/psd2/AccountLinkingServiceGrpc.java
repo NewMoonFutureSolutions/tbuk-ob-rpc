@@ -28,21 +28,21 @@ public final class AccountLinkingServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest,
-      com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse> getGetBankAuthorizationMethod;
+      com.tbuk.grpc.psd2.Linking.BankAuthorization> getGetBankAuthorizationMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetBankAuthorization",
       requestType = com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest.class,
-      responseType = com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.class,
+      responseType = com.tbuk.grpc.psd2.Linking.BankAuthorization.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest,
-      com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse> getGetBankAuthorizationMethod() {
-    io.grpc.MethodDescriptor<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest, com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse> getGetBankAuthorizationMethod;
+      com.tbuk.grpc.psd2.Linking.BankAuthorization> getGetBankAuthorizationMethod() {
+    io.grpc.MethodDescriptor<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest, com.tbuk.grpc.psd2.Linking.BankAuthorization> getGetBankAuthorizationMethod;
     if ((getGetBankAuthorizationMethod = AccountLinkingServiceGrpc.getGetBankAuthorizationMethod) == null) {
       synchronized (AccountLinkingServiceGrpc.class) {
         if ((getGetBankAuthorizationMethod = AccountLinkingServiceGrpc.getGetBankAuthorizationMethod) == null) {
           AccountLinkingServiceGrpc.getGetBankAuthorizationMethod = getGetBankAuthorizationMethod = 
-              io.grpc.MethodDescriptor.<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest, com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest, com.tbuk.grpc.psd2.Linking.BankAuthorization>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "com.tbuk.grpc.psd2.AccountLinkingService", "GetBankAuthorization"))
@@ -50,7 +50,7 @@ public final class AccountLinkingServiceGrpc {
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse.getDefaultInstance()))
+                  com.tbuk.grpc.psd2.Linking.BankAuthorization.getDefaultInstance()))
                   .setSchemaDescriptor(new AccountLinkingServiceMethodDescriptorSupplier("GetBankAuthorization"))
                   .build();
           }
@@ -89,7 +89,7 @@ public final class AccountLinkingServiceGrpc {
     /**
      */
     public void getBankAuthorization(com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest request,
-        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2.Linking.BankAuthorization> responseObserver) {
       asyncUnimplementedUnaryCall(getGetBankAuthorizationMethod(), responseObserver);
     }
 
@@ -100,7 +100,7 @@ public final class AccountLinkingServiceGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest,
-                com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse>(
+                com.tbuk.grpc.psd2.Linking.BankAuthorization>(
                   this, METHODID_GET_BANK_AUTHORIZATION)))
           .build();
     }
@@ -127,7 +127,7 @@ public final class AccountLinkingServiceGrpc {
     /**
      */
     public void getBankAuthorization(com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest request,
-        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2.Linking.BankAuthorization> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetBankAuthorizationMethod(), getCallOptions()), request, responseObserver);
     }
@@ -153,7 +153,7 @@ public final class AccountLinkingServiceGrpc {
 
     /**
      */
-    public com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse getBankAuthorization(com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest request) {
+    public com.tbuk.grpc.psd2.Linking.BankAuthorization getBankAuthorization(com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetBankAuthorizationMethod(), getCallOptions(), request);
     }
@@ -179,7 +179,7 @@ public final class AccountLinkingServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse> getBankAuthorization(
+    public com.google.common.util.concurrent.ListenableFuture<com.tbuk.grpc.psd2.Linking.BankAuthorization> getBankAuthorization(
         com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetBankAuthorizationMethod(), getCallOptions()), request);
@@ -207,7 +207,7 @@ public final class AccountLinkingServiceGrpc {
       switch (methodId) {
         case METHODID_GET_BANK_AUTHORIZATION:
           serviceImpl.getBankAuthorization((com.tbuk.grpc.psd2.Linking.GetBankAuthorizationRequest) request,
-              (io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2.Linking.GetBankAuthorizationResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.tbuk.grpc.psd2.Linking.BankAuthorization>) responseObserver);
           break;
         default:
           throw new AssertionError();
