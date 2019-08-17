@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+//option java_multiple_files = true;
+package com.tbuk.grpc.psd2;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+message Notification{
+    string notificationId=1;
+    string subscriber=2;
+    string content=3;
+    // List<Object> status=4; // list nasil ?
+}
+
+message DeleteNotificationRequest{
+    string notificationId=1;
+}
+
+service NotificationService {
+    rpc notify (Notification) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+      post: "/notifications"
+      body: "Notification"
+    };
+    }
+
+    rpc deleteNotification (DeleteNotificationRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+      delete: "/notifications/{notificationId}"
+
+    };
+    }
+}
+
+// void olursa tamam

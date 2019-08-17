@@ -1,0 +1,301 @@
+syntax = "proto3";
+
+//option java_multiple_files = true;
+package com.tbuk.grpc.psd2Account;
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+// ***** REQUEST & RESPONSE messages *****
+message BalanceRequest {
+    string bankAccountId = 1;
+}
+
+message BalanceResponse {
+    Money current = 1;
+    Money available = 2;
+    string updatedAt = 3;
+    //repeated TypedBalance other_balances = 4; // optional
+}
+
+message TransactionRequest {
+    string transactionId = 1;
+    string bankAccountId = 2;
+}
+
+message TransactionResponse {
+    Transaction transaction = 1;
+}
+message TransactionsRequest {
+    BankAccount account = 1;
+    int32 limit = 2;
+    string offset = 3;
+}
+
+message TransactionsPage {
+    repeated Transaction transactions = 1;
+    string offset = 2;
+}
+
+
+ // ***** YARDIMCI MSG - HELPER MESSAGES *****
+
+
+ message Transaction {
+    string id = 1;                                // Transaction ID
+    TransactionType type = 2;                     // Debit or credit
+    TransactionStatus status = 3;                 // Status. For example, SUCCESS or FAILURE_CANCELED
+    Money amount = 4; // Transaction amount.
+    string description = 5; // Optional description
+
+    string token_id = 6;                          // Points to the token, only set for Token transactions.
+    string token_transfer_id = 7;                 // Points to the token transfer, only set for Token transactions.
+    int64 created_at_ms = 8;                      // Creation time
+
+}
+
+enum TransactionType {
+    INVALID_TYPE = 0;
+    DEBIT = 1;
+    CREDIT = 2;
+}
+// onlarin listesi bu
+enum TransactionStatus {
+    INVALID_STATUS = 0;                   // invalid status
+    PENDING = 1;                          // the transaction is pending submission
+    PROCESSING = 7;                       // the transaction is being processed
+    SUCCESS = 2;                          // the transaction has been successful
+    PENDING_EXTERNAL_AUTHORIZATION = 15;  // the transaction requires authorization by the user to complete
+    FAILURE_CANCELED = 10;                // the transaction has been canceled, rolled back
+    FAILURE_INSUFFICIENT_FUNDS = 3;       // the transaction has failed due to insufficient funds
+    FAILURE_INVALID_CURRENCY = 4;         // the transaction has failed due to currency mismatch
+    FAILURE_PERMISSION_DENIED = 6;        // the transaction has failed due to access violation
+    FAILURE_QUOTE_EXPIRED = 11;           // the transaction has failed because the quote has expired
+    FAILURE_INVALID_AMOUNT = 12;          // the transaction has failed due to invalid amount
+    FAILURE_INVALID_QUOTE = 13;           // the transaction has failed due to invalid quote (wrong fx rate)
+    FAILURE_EXPIRED = 14;                 // the transaction has failed to complete within alotted time
+    FAILURE_GENERIC = 5;                  // the transaction has failed due to other reasons
+    SENT = 16;                            // legacy transfers only: the transaction has been sent but has not been acknowledged by the bank
+    INITIATED = 17;                       // the transaction has been initiated but the status is unknown
+}
+
+message Money {
+    string currency = 1; // ISO4217, 3 letter currency code such as "USD" or "EUR".
+    string value = 2;    // double amount in the string format.
+}
+message TypedBalance {
+    string type = 1;
+    Money amount = 2;
+    int64 updated_at_ms = 3;
+}
+
+message BankAccount {
+    message Token {
+        string member_id = 1;
+        string account_id = 2;
+    }
+
+
+    // Source account managed by a coop bank
+    message Bank {
+        string bank_id = 1;
+    }
+
+    // SWIFT transfer
+    message Swift {
+        string bic = 1;     // BIC code AAAABBCCDD
+        string account = 2;
+    }
+
+    // SEPA transfer.
+    message Sepa {
+        string iban = 1;    // International Bank Account Number
+        string bic = 2;     // Bic code. Optional, except for non EEA countries
+    }
+
+    // ACH transfer
+    message Ach {
+        string routing = 1; // Routing number
+        string account = 2;
+    }
+
+    // Faster Payments Service transfer (UK)
+    message FasterPayments {
+        string sort_code = 1;
+        string account_number = 2;
+    }
+
+    // Custom authorization
+    message Custom {
+        string bank_id = 1;
+        string payload = 2;
+    }
+
+    oneof account {
+        Token token = 1;
+        Swift swift = 2;
+        Sepa sepa = 3;
+        Ach ach = 4;
+        Bank bank = 5;
+        FasterPayments faster_payments = 6;
+        Custom custom = 7;
+    }
+
+    map<string, string> metadata = 8;
+
+}
+// *************
+
+
+message LinkedBankAccount{
+  AccountType accountType=1;
+  string account=2;
+}
+enum AccountType {
+    INVALID = 0;
+    OTHER = 1;
+    CHECKING = 2;
+    SAVINGS = 3;
+    LOAN = 4;
+}
+
+message CreateAccountResponse{
+  string accountId=1;
+}
+message DestinationRequest{
+  string bankAccountId=1;
+}
+message TransferDestinations{
+    repeated TransferDestination destinations=1;
+    CustomerData customerData=2;
+}
+message TransferDestination{
+
+    // SWIFT transfer
+    message Swift {
+        string bic = 1;     // BIC code AAAABBCCDD
+        string account = 2;
+    }
+
+    // SEPA transfer.
+    message Sepa {
+        string iban = 1;    // International Bank Account Number
+        string bic = 2;     // Bic code. Optional, except for non EEA countries
+    }
+
+    // ACH transfer
+    message Ach {
+        string routing = 1; // Routing number
+        string account = 2;
+    }
+
+    // Faster Payments Service transfer (UK)
+    message FasterPayments {
+        string sort_code = 1;
+        string account_number = 2;
+    }
+
+    // Custom authorization
+    message Custom {
+        string bank_id = 1;
+        string payload = 2;
+    }
+
+    oneof account {
+        Swift swift = 2;
+        Sepa sepa = 3;
+        FasterPayments faster_payments = 4;
+        Custom custom = 5;
+    }
+
+}
+message CustomerData{
+    repeated string legal_names = 1;
+    Address address = 2;
+}
+
+    message Address {
+        string house_number = 1;
+        string house_name = 2;
+        string flats = 3;
+        string street = 4;
+        string place = 5;
+        string post_code = 6;
+        string city = 7;
+        string country = 8;// UK
+        string full = 9;
+
+    }
+
+message AccountDetailsRequest{
+ string bankAccountId=1;
+}
+message AccountDetails{
+
+    string identifier=1;
+    AccountType accountType=2;
+    string status=3;
+    repeated Entry metadata=4;
+}
+message Entry{
+    string key=1;
+    string value=2;
+}
+message UnlinkRequest{
+  string bankAccountId=1;
+}
+message UnlinkResponse{
+
+}
+service AccountService {
+    // 1
+    rpc accounts (LinkedBankAccount) returns (CreateAccountResponse) {
+        option (google.api.http) = {
+        post: "/accounts"
+    };
+    }
+    // 2 (Token ready)
+    rpc balance (BalanceRequest) returns (BalanceResponse) {
+        option (google.api.http) = {
+        get: "/accounts/{bankAccountId}/balance"
+    };
+    }
+    // 3 (Token ready)
+    rpc GetTransactions (TransactionsRequest) returns (TransactionsPage) {
+        option (google.api.http) = {
+        get: "/accounts/{bankAccountId}/transactions?limit={limit}&offset={offset}"
+    };
+    }
+
+    // 4 (Token ready)
+    rpc GetTransaction (TransactionRequest) returns (Transaction) {
+        option (google.api.http) = {
+
+        get: "/accounts/{bankAccountId}/transactions/{transactionId}"
+    };
+    }
+    // 5 (Token ready)
+    rpc destinations(DestinationRequest) returns (TransferDestinations) {
+        option (google.api.http) = {
+        get: "/accounts/{bankAccountId}/destinations"
+    };
+    }
+    // 6 eksik
+
+    rpc GetAccountDetails(AccountDetailsRequest) returns (AccountDetails) {
+        option (google.api.http) = {
+        get: "/accounts/{bankAccountId}/details"
+    };
+    }
+    // 7 (Token ready)
+    rpc unlink(UnlinkRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+        get: "/accounts/{bankAccountId}"
+    };
+    }
+
+
+}
+
+
+// *************

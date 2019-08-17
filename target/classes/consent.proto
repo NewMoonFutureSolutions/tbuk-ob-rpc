@@ -1,0 +1,26 @@
+syntax = "proto3";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+//option java_multiple_files = true;
+package com.tbuk.grpc.psd2;
+
+message ConsentRequest{
+    string tokenConsentId=1;
+}
+
+// Void meselesi haric tamam
+service ConsentService {
+
+    rpc created (ConsentRequest) returns (google.protobuf.Empty){
+          option (google.api.http) = {
+      put: "/consents/{tokenConsentId}/created"
+
+    };
+    }
+
+    rpc revoked (ConsentRequest) returns (google.protobuf.Empty){
+        option (google.api.http) = {
+      put: "/consents/{tokenConsentId}/revoked"
+    };
+    }
+}
