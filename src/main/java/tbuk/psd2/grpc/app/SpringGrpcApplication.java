@@ -3,10 +3,11 @@ package tbuk.psd2.grpc.app;
 import com.tbuk.grpc.psd2Account.Account;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import tbuk.psd2.grpc.util.CONSTANTS;
 import tbuk.psd2.grpc.util.Utils;
-
 @SpringBootApplication
+@ComponentScan({"tbuk.psd2.grpc","com.tbuk.grpc"})
 public class SpringGrpcApplication {
 
   public static void main(String[] args) {

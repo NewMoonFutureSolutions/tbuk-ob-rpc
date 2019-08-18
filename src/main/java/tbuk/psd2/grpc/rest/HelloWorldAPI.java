@@ -16,7 +16,7 @@ public class HelloWorldAPI extends tbuk.psd2.grpc.rest.HelloWorldServiceGrpc.Hel
 
         LOGGER.info("server received {}", request);
 
-        tbuk.psd2.grpc.rest.HelloWorld.Greeting greeting=tbuk.psd2.grpc.rest.HelloWorld.Greeting.newBuilder().setMessage("Hi").build();
+        tbuk.psd2.grpc.rest.HelloWorld.Greeting greeting=tbuk.psd2.grpc.rest.HelloWorld.Greeting.newBuilder().setMessage("Hi "+request.getFirstName()).build();
         LOGGER.info("server responded {}", greeting);
 
         responseObserver.onNext(greeting);

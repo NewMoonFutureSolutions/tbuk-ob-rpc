@@ -1,0 +1,5 @@
+server:
+  port: 8090
+grpc:
+  server:
+    port: 6135
