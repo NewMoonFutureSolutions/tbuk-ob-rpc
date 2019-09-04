@@ -67,7 +67,7 @@ public class LinkingServ {
     }
     private  BankAccount getBankAccount(int op){
         // tum cakma banka hesaplarini DummyResponses da topladim.. sen buraya gercek implementasyon yapacaksin
-        return BankAccount.newBuilder().build();
+        return BankAccount.newBuilder().setCustom(Custom.newBuilder().setBankId(CONSTANTS.BANKID).setPayload(CONSTANTS.INFOMAP.get("customer1.account1.tbukID")).build()).build();
            //     .builder().custom(Custom.builder().bankId(CONSTANTS.BANKID).payload(CONSTANTS.INFOMAP.get("customer1.account1.tbukID")).build()).build();
 
     }

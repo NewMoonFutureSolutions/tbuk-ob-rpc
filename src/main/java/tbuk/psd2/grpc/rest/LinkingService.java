@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import tbuk.psd2.grpc.bl.LinkingServ;
 
 
-@GRpcService
+//@GRpcService
 public class LinkingService extends com.tbuk.grpc.psd2.AccountLinkingServiceGrpc.AccountLinkingServiceImplBase {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LinkingService.class);

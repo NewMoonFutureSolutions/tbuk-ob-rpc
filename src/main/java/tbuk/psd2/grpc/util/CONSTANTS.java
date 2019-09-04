@@ -22,4 +22,9 @@ public class CONSTANTS {
     public static HashMap<String, String> TnxTransferMap = new HashMap<>();
 
     public static int transactionId = 0;
+
+    public static String certChainFilePath="/Users/borauzun/Dropbox/Public/tbuk/Sandbox certificate/publicX509SandboxTBUK.pem";
+    public static String privateKeyFilePath="/Users/borauzun/Dropbox/Public/tbuk/Sandbox certificate/privateX509SandboxTBUK.pem";
+    public static String trustCertCollectionFilePath="/Users/borauzun/Dropbox/Public/tbuk/Sandbox certificate/publicX509SandboxTBUK.pem";
+
 }
